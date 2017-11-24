@@ -1,0 +1,47 @@
+button, .PaperButton {
+  align-self: center;
+  background: 0 0;
+  color: #41403e;
+  outline: 0;
+  border: solid 2px #41403e;
+  border: 2px solid #41403e;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius: 15px 255px;
+  font-size: 1rem;
+  padding: .75rem .75rem;
+  cursor: pointer;
+  -webkit-box-shadow: 15px 28px 25px -18px rgba(0,0,0,.2);
+  -moz-box-shadow: 15px 28px 25px -18px rgba(0,0,0,.2);
+  box-shadow: 15px 28px 25px -18px rgba(0,0,0,.2);
+  transition: all .5s ease;
+  font-family: Neucha,sans-serif;
+}
+
+.Large {
+  -webkit-box-shadow: 20px 38px 34px -26px rgba(0,0,0,.2);
+  -moz-box-shadow: 20px 38px 34px -26px rgba(0,0,0,.2);
+  box-shadow: 20px 38px 34px -26px rgba(0,0,0,.2);
+  font-size: 2rem;
+  padding: 1rem 1rem;
+}
+
+.Small {
+  -webkit-box-shadow: 10px 19px 17px -13px rgba(0,0,0,.2);
+  -moz-box-shadow: 10px 19px 17px -13px rgba(0,0,0,.2);
+  box-shadow: 10px 19px 17px -13px rgba(0,0,0,.2);
+  font-size: .75rem;
+  padding: .5rem;
+}
+
+.Disabled, button[disabled], input[type=button][disabled] {
+  cursor: not-allowed;
+  opacity: .5;
+}
+
+button:hover, .PaperButton:hover {
+  -webkit-box-shadow: 2px 8px 4px -6px rgba(0,0,0,.3);
+  -moz-box-shadow: 2px 8px 4px -6px rgba(0,0,0,.3);
+  box-shadow: 2px 8px 4px -6px rgba(0,0,0,.3);
+}

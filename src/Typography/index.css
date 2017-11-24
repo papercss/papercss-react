@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Neucha|Patrick+Hand+SC');
+
+a, button, input, option, p, select, table, tbody, td, th, thead, tr {
+  font-family: 'Neucha', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Patrick Hand SC',sans-serif;
+  font-weight: 400;
+}

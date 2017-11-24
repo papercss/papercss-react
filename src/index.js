@@ -1,11 +1,4 @@
-import React from 'react';
-
-class Fancy extends React.Component {
-  render() {
-    return (
-      <div>This is so Fancy!</div>
-    );
-  }
-}
-
-export default Fancy;
+export { default as PaperButton } from './Buttons';
+export { default as PaperTypography } from './Typography';
+export { default as PaperLayout } from './Layout';
+export { default as PaperCol } from './Layout/Column';
