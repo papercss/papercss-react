@@ -64,7 +64,7 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 15);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -206,7 +206,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(20);
+var	fixUrls = __webpack_require__(28);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -538,7 +538,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _PaperButton = __webpack_require__(7);
+var _PaperButton = __webpack_require__(9);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
@@ -560,12 +560,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _PaperColumn = __webpack_require__(8);
+var _PaperInput = __webpack_require__(10);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_PaperColumn).default;
+    return _interopRequireDefault(_PaperInput).default;
   }
 });
 
@@ -582,12 +582,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _PaperLayout = __webpack_require__(9);
+var _PaperForms = __webpack_require__(11);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_PaperLayout).default;
+    return _interopRequireDefault(_PaperForms).default;
   }
 });
 
@@ -604,12 +604,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _PaperTypography = __webpack_require__(10);
+var _PaperColumn = __webpack_require__(12);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_PaperTypography).default;
+    return _interopRequireDefault(_PaperColumn).default;
   }
 });
 
@@ -626,13 +626,57 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _PaperLayout = __webpack_require__(13);
+
+Object.defineProperty(exports, 'default', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_PaperLayout).default;
+  }
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _PaperTypography = __webpack_require__(14);
+
+Object.defineProperty(exports, 'default', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_PaperTypography).default;
+  }
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _index = __webpack_require__(16);
+var _index = __webpack_require__(22);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -670,7 +714,7 @@ var PaperButton = function (_React$Component) {
 exports.default = PaperButton;
 
 /***/ }),
-/* 8 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -686,7 +730,132 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _index = __webpack_require__(17);
+var _index = __webpack_require__(23);
+
+var _index2 = _interopRequireDefault(_index);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var PaperInput = function (_React$Component) {
+  _inherits(PaperInput, _React$Component);
+
+  function PaperInput() {
+    _classCallCheck(this, PaperInput);
+
+    return _possibleConstructorReturn(this, (PaperInput.__proto__ || Object.getPrototypeOf(PaperInput)).apply(this, arguments));
+  }
+
+  _createClass(PaperInput, [{
+    key: 'render',
+    value: function render() {
+      var theInput = void 0;
+
+      if (this.props.label) {
+        theInput = _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement(
+            'label',
+            { className: this.props.inputSize, htmlFor: this.props.inputID },
+            this.props.label
+          ),
+          _react2.default.createElement('input', { className: this.props.inputSize, placeholder: this.props.placeholder, id: this.props.inputID, disabled: this.props.disabled })
+        );
+      } else {
+        theInput = _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement('input', { className: this.props.inputSize, placeholder: this.props.placeholder, id: this.props.inputID, disabled: this.props.disabled })
+        );
+      }
+
+      return theInput;
+    }
+  }]);
+
+  return PaperInput;
+}(_react2.default.Component);
+
+exports.default = PaperInput;
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _index = __webpack_require__(24);
+
+var _index2 = _interopRequireDefault(_index);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var PaperForms = function (_React$Component) {
+  _inherits(PaperForms, _React$Component);
+
+  function PaperForms() {
+    _classCallCheck(this, PaperForms);
+
+    return _possibleConstructorReturn(this, (PaperForms.__proto__ || Object.getPrototypeOf(PaperForms)).apply(this, arguments));
+  }
+
+  _createClass(PaperForms, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'form',
+        null,
+        this.props.children
+      );
+    }
+  }]);
+
+  return PaperForms;
+}(_react2.default.Component);
+
+exports.default = PaperForms;
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _index = __webpack_require__(25);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -724,7 +893,7 @@ var PaperColumn = function (_React$Component) {
 exports.default = PaperColumn;
 
 /***/ }),
-/* 9 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -740,7 +909,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _index = __webpack_require__(18);
+var _index = __webpack_require__(26);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -778,7 +947,7 @@ var PaperLayout = function (_React$Component) {
 exports.default = PaperLayout;
 
 /***/ }),
-/* 10 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -794,7 +963,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _index = __webpack_require__(19);
+var _index = __webpack_require__(27);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -826,7 +995,7 @@ var PaperTypography = function (_React$Component) {
 exports.default = PaperTypography;
 
 /***/ }),
-/* 11 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -845,7 +1014,7 @@ Object.defineProperty(exports, 'PaperButton', {
   }
 });
 
-var _Typography = __webpack_require__(6);
+var _Typography = __webpack_require__(8);
 
 Object.defineProperty(exports, 'PaperTypography', {
   enumerable: true,
@@ -854,7 +1023,7 @@ Object.defineProperty(exports, 'PaperTypography', {
   }
 });
 
-var _Layout = __webpack_require__(5);
+var _Layout = __webpack_require__(7);
 
 Object.defineProperty(exports, 'PaperLayout', {
   enumerable: true,
@@ -863,7 +1032,7 @@ Object.defineProperty(exports, 'PaperLayout', {
   }
 });
 
-var _Column = __webpack_require__(4);
+var _Column = __webpack_require__(6);
 
 Object.defineProperty(exports, 'PaperCol', {
   enumerable: true,
@@ -872,10 +1041,28 @@ Object.defineProperty(exports, 'PaperCol', {
   }
 });
 
+var _Forms = __webpack_require__(5);
+
+Object.defineProperty(exports, 'PaperForm', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Forms).default;
+  }
+});
+
+var _Input = __webpack_require__(4);
+
+Object.defineProperty(exports, 'PaperInput', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Input).default;
+  }
+});
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 12 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -889,7 +1076,35 @@ exports.push([module.i, "button, .PaperButton {\n  align-self: center;\n  backgr
 
 
 /***/ }),
-/* 13 */
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".form-group > label, .form-group legend {\n  display: inline-block;\n  margin-bottom: .5rem;\n}\n\n.form-group input, .form-group select {\n  display: block;\n  background: 0 0;\n  color: #41403e;\n  outline: 0;\n  border-top-left-radius: 255px 15px;\n  border-top-right-radius: 15px 225px;\n  border-bottom-right-radius: 225px 15px;\n  border-bottom-left-radius: 15px 255px;\n  font-size: 1rem;\n  padding: .5rem .5rem;\n  border: 2px solid #41403e;\n}\n\n.form-group .input-block {\n  width: 100%;\n}\n\ninput.disabled, input[disabled], select.disabled, select[disabled] {\n  cursor: not-allowed;\n  opacity: .5;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "form .form-group {\n  margin-bottom: 1rem;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -903,7 +1118,7 @@ exports.push([module.i, ".col {\n  padding: 1rem;\n}\n\n.col-4 {\n  -webkit-box-
 
 
 /***/ }),
-/* 14 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -917,7 +1132,7 @@ exports.push([module.i, ".row {\n  margin-right: auto;\n  margin-left: auto;\n  
 
 
 /***/ }),
-/* 15 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -925,19 +1140,19 @@ exports = module.exports = __webpack_require__(0)(undefined);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Neucha|Patrick+Hand+SC);", ""]);
 
 // module
-exports.push([module.i, "a, button, input, option, p, select, table, tbody, td, th, thead, tr {\n  font-family: 'Neucha', sans-serif;\n}\n\nh1, h2, h3, h4, h5, h6 {\n  font-family: 'Patrick Hand SC',sans-serif;\n  font-weight: 400;\n}\n", ""]);
+exports.push([module.i, "a, button, input, option, p, select, table, tbody, td, th, thead, tr, * {\n  font-family: 'Neucha', sans-serif;\n}\n\nh1, h2, h3, h4, h5, h6 {\n  font-family: 'Patrick Hand SC',sans-serif;\n  font-weight: 400;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 16 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(12);
+var content = __webpack_require__(16);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -962,13 +1177,13 @@ if(false) {
 }
 
 /***/ }),
-/* 17 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(13);
+var content = __webpack_require__(17);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -993,13 +1208,13 @@ if(false) {
 }
 
 /***/ }),
-/* 18 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(14);
+var content = __webpack_require__(18);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -1024,13 +1239,44 @@ if(false) {
 }
 
 /***/ }),
-/* 19 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(15);
+var content = __webpack_require__(19);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../node_modules/css-loader/index.js!./index.css", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js!./index.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(20);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -1055,7 +1301,38 @@ if(false) {
 }
 
 /***/ }),
-/* 20 */
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(21);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../node_modules/css-loader/index.js!./index.css", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js!./index.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 28 */
 /***/ (function(module, exports) {
 
 

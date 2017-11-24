@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Neucha|Patrick+Hand+SC');
 
-a, button, input, option, p, select, table, tbody, td, th, thead, tr {
+a, button, input, option, p, select, table, tbody, td, th, thead, tr, * {
   font-family: 'Neucha', sans-serif;
 }
 
