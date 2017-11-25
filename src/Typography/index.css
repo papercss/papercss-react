@@ -510,3 +510,10 @@ img {
   -moz-box-shadow: 2px 8px 4px -6px rgba(0,0,0,.3);
   box-shadow: 2px 8px 4px -6px rgba(0,0,0,.3);
 }
+
+.child-shadows-hover > * {
+  -webkit-box-shadow: 15px 28px 25px -18px rgba(0,0,0,.2);
+  -moz-box-shadow: 15px 28px 25px -18px rgba(0,0,0,.2);
+  box-shadow: 15px 28px 25px -18px rgba(0,0,0,.2);
+  transition: all .5s ease;
+}
