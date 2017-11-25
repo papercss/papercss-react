@@ -23,8 +23,9 @@ class PaperCheckbox extends React.Component {
   }
 
   boxIsChecked(e) {
-    console.log('e is ', e);
-    if (this.state.selectedChecks.indexOf(e) > 0) {
+    let selectedChecks = this.state.selectedChecks;
+
+    if (selectedChecks.indexOf(e) >= 0) {
       return true;
     }
     else {
@@ -34,17 +35,18 @@ class PaperCheckbox extends React.Component {
 
   handleOptionChange(e) {
     let component = this;
-    // let selectedChecks = this.state.selectedChecks;
-    //
-    // if (selectedChecks.indexOf(e) > 0) {
-    //   let index = selectedChecks.indexOf(e);
-    //   selectedChecks.splice(index, 1);
-    // }
-    // else {
-    //   selectedChecks.push(e);
-    // }
-    //
-    // this.setState({selectedChecks: selectedChecks});
+    let targetVal = e.target.value;
+    let selectedChecks = this.state.selectedChecks;
+
+    if (selectedChecks.indexOf(targetVal) >= 0) {
+      let index = selectedChecks.indexOf(targetVal);
+      selectedChecks.splice(index, 1);
+    }
+    else {
+      selectedChecks.push(targetVal);
+    }
+
+    this.setState({selectedChecks: selectedChecks});
 
     if (component.props.callback) {
       return component.props.callback(e);
@@ -59,8 +61,8 @@ class PaperCheckbox extends React.Component {
         {React.Children.map(children, (child, i) => {
           return (
             <label htmlFor={child.props.inputID} className={'paper-check'}>
-              <input type='checkbox' id={child.props.inputID} value={child.props.val} checked={child.props.checked || this.boxIsChecked(child.props.val) ? true : false} onChange={this.handleOptionChange(child.props.val)} />
-              <span>{child.props.label} check ? = {child.props.checked} or {child.checked}</span>
+              <input type='checkbox' id={child.props.inputID} value={child.props.val} checked={this.boxIsChecked(child.props.val) ? true : false} onChange={this.handleOptionChange} />
+              <span>{child.props.label}</span>
             </label>
           )
         })}
