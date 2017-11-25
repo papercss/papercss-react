@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css?family=Neucha|Patrick+Hand+SC');
+
+a, button, input, option, p, select, table, tbody, td, th, thead, tr, * {
+  font-family: 'Neucha', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Patrick Hand SC',sans-serif;
+  font-weight: 400;
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- LISTS =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+ul, ol {
+  font-family: 'Neucha', sans-serif;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ol ol {
+  list-style-type: upper-alpha;
+}
+
+ol ol ol {
+  list-style-type: upper-roman;
+}
+
+ol ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+ol ol ol ol ol {
+  list-style-type: lower-roman;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+ul li {
+  text-indent: -7px;
+}
+
+ul li:before {
+  position: relative;
+  left: -7px;
+}
+
+ul li:before {
+  content: "-";
+}
+
+ul ul li:before {
+  content: "+";
+}
+
+ul ul ul li:before {
+  content: "~";
+}
+
+ul ul ul ul li:before {
+  content: "⤍";
+}
+
+ul ul ul ul ul li:before {
+  content: "⁎";
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- CODE =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+code {
+  padding: 2px 4px;
+  font-size: 80%;
+  color: #0071de;
+  background-color: #f2f2f2;
+  border-radius: 3px;
+}
+
+kbd {
+  padding: 2px 4px;
+  font-size: 80%;
+  color: #fff;
+  background-color: #41403e;
+  border-radius: 3px;
+}
+
+code, kbd, samp, pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+pre {
+  display: block;
+  padding: 1em;
+  font-size: 80%;
+  line-height: 1.5;
+  color: #41403e;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #fafafa;
+  border: 1px solid #c1c0bd;
+  border-radius: 3px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- TABLE =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+table {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+}
+
+table thead tr th {
+  vertical-align: bottom;
+  text-align: left;
+  padding: 8px;
+  line-height: 1.5;
+}
+
+table tbody tr td {
+  padding: 8px;
+  line-height: 1.5;
+  vertical-align: top;
+  border-top: 1px dashed #d9d9d8;
+}
+
+table.table-hover tbody tr:hover {
+  color: #0071de;
+}
+
+table.table-alternating tbody tr:nth-of-type(even) {
+  color: #82807c;
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- POPOVER =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+[popover] {
+  position: relative;
+  margin: 24px;
+}
+
+[popover-position=left]::after {
+  left: 0;
+  top: 50%;
+  margin-left: -8px;
+  transform: translateX(-100%) translateY(-50%);
+}
+
+[popover]::after {
+  content: attr(popover);
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  opacity: 0;
+  padding: 4px 2px;
+  min-width: 80px;
+  font-size: .7em;
+  text-align: center;
+  color: #fff;
+  background: rgba(0,0,0,.7);
+  transition: opacity .25s ease-out;
+  transform: translateX(-50%) translateY(-100%);
+  border: 2px solid #41403e;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius: 15px 255px;
+}
+
+[popover-position=top]::after {
+  left: 50%;
+}
+
+[popover-position=bottom]::after {
+  top: 100%;
+  margin-top: 8px;
+  transform: translateX(-50%) translateY(0);
+}
+
+[popover-position=right]::after {
+  left: 100%;
+  top: 50%;
+  margin-left: 8px;
+  transform: translateX(0) translateY(-50%);
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- CARD =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+.card {
+  -webkit-box-shadow: 15px 28px 25px -18px rgba(0,0,0,.2);
+  -moz-box-shadow: 15px 28px 25px -18px rgba(0,0,0,.2);
+  box-shadow: 15px 28px 25px -18px rgba(0,0,0,.2);
+  transition: all .5s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  border: 2px solid #e6e7e9;
+}
+
+.card:hover:hover {
+  -webkit-box-shadow: 2px 8px 4px -6px rgba(0,0,0,.3);
+  -moz-box-shadow: 2px 8px 4px -6px rgba(0,0,0,.3);
+  box-shadow: 2px 8px 4px -6px rgba(0,0,0,.3);
+}
+
+.card .image-bottom, .card .image-top, .card img {
+  border: 0;
+  border-radius: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 2px solid #41403e;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius: 15px 255px;
+}
+
+.card .card-body {
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+.card .card-body .card-title, .card .card-body h4 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+
+.card .card-body .card-subtitle, .card .card-body h5 {
+  color: #0071de;
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+
+.card .card-body .card-text, .card .card-body p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.paper-btn, button, input[type=button] {
+  align-self: center;
+  background: 0 0;
+  color: #41403e;
+  outline: 0;
+  border: solid 2px #41403e;
+  border: 2px solid #41403e;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius: 15px 255px;
+  font-size: 1rem;
+  padding: .75rem .75rem;
+  cursor: pointer;
+  -webkit-box-shadow: 15px 28px 25px -18px rgba(0,0,0,.2);
+  -moz-box-shadow: 15px 28px 25px -18px rgba(0,0,0,.2);
+  box-shadow: 15px 28px 25px -18px rgba(0,0,0,.2);
+  transition: all .5s ease;
+}
+
+.paper-btn:hover:hover, button:hover:hover, input[type=button]:hover:hover {
+  -webkit-box-shadow: 2px 8px 4px -6px rgba(0,0,0,.3);
+  -moz-box-shadow: 2px 8px 4px -6px rgba(0,0,0,.3);
+  box-shadow: 2px 8px 4px -6px rgba(0,0,0,.3);
+}
+
+.card .card-body .card-link + .card-link, .card .card-body a + a {
+  margin-left: 1.25rem;
+}
+
+.card .card-header {
+  border-bottom: 2px solid #e6e7e9;
+}
+
+.card .card-footer, .card .card-header {
+  padding: .75rem 1.25rem;
+  background-color: rgba(0,0,0,.03);
+}
+
+.card .card-footer {
+  border-top: 2px solid #e6e7e9;
+}
+
+.card .card-footer, .card .card-header {
+  padding: .75rem 1.25rem;
+  background-color: rgba(0,0,0,.03);
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- BADGE =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+.badge {
+  border: 2px solid #41403e;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius: 15px 255px;
+  display: inline-block;
+  padding: .25em .4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  background-color: #868e96;
+  color: #fff;
+  border-color: transparent;
+}
+
+.badge.secondary {
+  background-color: #0071de;
+}
+
+.badge.success {
+  background-color: #86a361;
+}
+
+.badge.warning {
+  background-color: #ddcd45;
+}
+
+.badge.danger {
+  background-color: #a7342d;
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- COLOR =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+.text-primary {
+  color: #41403e;
+}
+
+.text-secondary {
+  color: #0071de;
+}
+
+.text-success {
+  color: #86a361;
+}
+
+.text-warning {
+  color: #ddcd45;
+}
+
+.text-danger {
+  color: #a7342d;
+}
+
+.text-muted {
+  color: #868e96;
+}
+
+.background-primary {
+  background-color: #c1c0bd;
+}
+
+.background-secondary {
+  background-color: #deefff;
+}
+
+.background-success {
+  background-color: #d0dbc2;
+}
+
+.background-warning {
+  background-color: #f5f0c6;
+}
+
+.background-danger {
+  background-color: #f0cbc9;
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- BORDERS =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+.border-primary {
+  border-color: #41403e;
+}
+
+.border, .border-1, .child-borders > :nth-child(6n+1) {
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius: 15px 255px;
+}
+
+.border {
+  border: 2px solid #41403e;
+}
+
+.border-2, .child-borders > :nth-child(6n+2) {
+  border-top-left-radius: 125px 25px;
+  border-top-right-radius: 10px 205px;
+  border-bottom-right-radius: 20px 205px;
+  border-bottom-left-radius: 185px 25px;
+}
+
+.border-3, .child-borders > :nth-child(6n+3) {
+  border-top-left-radius: 15px 225px;
+  border-top-right-radius: 255px 15px;
+  border-bottom-left-radius: 225px 15px;
+  border-bottom-right-radius: 15px 255px;
+}
+
+.border-4, .child-borders > :nth-child(6n+4) {
+  border-top-left-radius: 15px 225px;
+  border-top-right-radius: 25px 150px;
+  border-bottom-left-radius: 25px 115px;
+  border-bottom-right-radius: 155px 25px;
+}
+
+.border-5, .child-borders > :nth-child(6n+5) {
+  border-top-left-radius: 250px 15px;
+  border-top-right-radius: 25px 80px;
+  border-bottom-left-radius: 20px 115px;
+  border-bottom-right-radius: 15px 105px;
+}
+
+.border-6, .child-borders > :nth-child(6n+6) {
+  border-top-left-radius: 28px 125px;
+  border-top-right-radius: 100px 30px;
+  border-bottom-right-radius: 20px 205px;
+  border-bottom-left-radius: 15px 225px;
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- BORDER COLOR =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+.border-primary {
+  border-color: #41403e;
+}
+
+.border-secondary {
+  border-color: #0071de;
+}
+
+.border-success {
+  border-color: #86a361;
+}
+
+.border-warning {
+  border-color: #ddcd45;
+}
+
+.border-danger {
+  border-color: #a7342d;
+}
+
+.border-white {
+  border-color: #fff;
+}
+
+.child-borders > * {
+  border: 2px solid #41403e;
+}
+
+.border-dashed {
+  border-style: dashed;
+}
+
+.border-dotted {
+  border-style: dotted;
+}
+
+.border-thick {
+  border-width: 5px;
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- SHADOW =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+.shadow.shadow-large {
+  -webkit-box-shadow: 20px 38px 34px -26px rgba(0,0,0,.2);
+  -moz-box-shadow: 20px 38px 34px -26px rgba(0,0,0,.2);
+  box-shadow: 20px 38px 34px -26px rgba(0,0,0,.2);
+}
+
+.shadow {
+  -webkit-box-shadow: 15px 28px 25px -18px rgba(0,0,0,.2);
+  -moz-box-shadow: 15px 28px 25px -18px rgba(0,0,0,.2);
+  box-shadow: 15px 28px 25px -18px rgba(0,0,0,.2);
+  transition: all .5s ease;
+}
+
+.shadow.shadow-small {
+  -webkit-box-shadow: 10px 19px 17px -13px rgba(0,0,0,.2);
+  -moz-box-shadow: 10px 19px 17px -13px rgba(0,0,0,.2);
+  box-shadow: 10px 19px 17px -13px rgba(0,0,0,.2);
+}
+
+.shadow.shadow-hover:hover {
+  -webkit-box-shadow: 2px 8px 4px -6px rgba(0,0,0,.3);
+  -moz-box-shadow: 2px 8px 4px -6px rgba(0,0,0,.3);
+  box-shadow: 2px 8px 4px -6px rgba(0,0,0,.3);
+}
+
+.child-shadows > * {
+  -webkit-box-shadow: 15px 28px 25px -18px rgba(0,0,0,.2);
+  -moz-box-shadow: 15px 28px 25px -18px rgba(0,0,0,.2);
+  box-shadow: 15px 28px 25px -18px rgba(0,0,0,.2);
+  transition: all .5s ease;
+}
+
+.child-shadows-hover > :hover {
+  -webkit-box-shadow: 2px 8px 4px -6px rgba(0,0,0,.3);
+  -moz-box-shadow: 2px 8px 4px -6px rgba(0,0,0,.3);
+  box-shadow: 2px 8px 4px -6px rgba(0,0,0,.3);
+}
+
+.child-shadows-hover > * {
+  -webkit-box-shadow: 15px 28px 25px -18px rgba(0,0,0,.2);
+  -moz-box-shadow: 15px 28px 25px -18px rgba(0,0,0,.2);
+  box-shadow: 15px 28px 25px -18px rgba(0,0,0,.2);
+  transition: all .5s ease;
+}

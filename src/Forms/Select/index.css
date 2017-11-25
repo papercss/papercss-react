@@ -1,0 +1,18 @@
+.form-group > label, .form-group legend {
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+
+.form-group input, .form-group select {
+  display: block;
+  background: 0 0;
+  color: #41403e;
+  outline: 0;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius: 15px 255px;
+  font-size: 1rem;
+  padding: .5rem .5rem;
+  border: 2px solid #41403e;
+}
