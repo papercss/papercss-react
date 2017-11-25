@@ -4,8 +4,7 @@ React Components for [PaperCss](https://github.com/rhyneav/papercss)
 
 Install with NPM `npm install --save react-paper-css`
 
-[Demo](https://github.com/Banjerr/React-Paper-CSS-Page)
-(actual demo coming soon)
+[Demo](https://banjerr.github.io/React-Paper-CSS-Page/)
 
 ## Docs
 
