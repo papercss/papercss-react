@@ -6,3 +6,4 @@ export { default as PaperForm } from './Forms';
 export { default as PaperInput } from './Forms/Input';
 export { default as PaperSelect } from './Forms/Select';
 export { default as PaperRadio } from './Forms/Radio';
+export { default as PaperCheckbox } from './Forms/Checkbox';

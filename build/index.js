@@ -64,7 +64,7 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 19);
+/******/ 	return __webpack_require__(__webpack_require__.s = 21);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -206,7 +206,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(36);
+var	fixUrls = __webpack_require__(40);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -538,7 +538,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _PaperButton = __webpack_require__(11);
+var _PaperButton = __webpack_require__(12);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
@@ -560,12 +560,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _PaperInput = __webpack_require__(12);
+var _PaperCheckbox = __webpack_require__(13);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_PaperInput).default;
+    return _interopRequireDefault(_PaperCheckbox).default;
   }
 });
 
@@ -582,12 +582,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _PaperRadio = __webpack_require__(14);
+var _PaperInput = __webpack_require__(14);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_PaperRadio).default;
+    return _interopRequireDefault(_PaperInput).default;
   }
 });
 
@@ -604,12 +604,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _PaperSelect = __webpack_require__(15);
+var _PaperRadio = __webpack_require__(16);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_PaperSelect).default;
+    return _interopRequireDefault(_PaperRadio).default;
   }
 });
 
@@ -626,12 +626,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _PaperForms = __webpack_require__(13);
+var _PaperSelect = __webpack_require__(17);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_PaperForms).default;
+    return _interopRequireDefault(_PaperSelect).default;
   }
 });
 
@@ -648,12 +648,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _PaperColumn = __webpack_require__(16);
+var _PaperForms = __webpack_require__(15);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_PaperColumn).default;
+    return _interopRequireDefault(_PaperForms).default;
   }
 });
 
@@ -670,12 +670,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _PaperLayout = __webpack_require__(17);
+var _PaperColumn = __webpack_require__(18);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_PaperLayout).default;
+    return _interopRequireDefault(_PaperColumn).default;
   }
 });
 
@@ -692,12 +692,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _PaperTypography = __webpack_require__(18);
+var _PaperLayout = __webpack_require__(19);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_PaperTypography).default;
+    return _interopRequireDefault(_PaperLayout).default;
   }
 });
 
@@ -714,13 +714,35 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _PaperTypography = __webpack_require__(20);
+
+Object.defineProperty(exports, 'default', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_PaperTypography).default;
+  }
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _index = __webpack_require__(28);
+var _index = __webpack_require__(31);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -758,7 +780,7 @@ var PaperButton = function (_React$Component) {
 exports.default = PaperButton;
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -774,7 +796,128 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _index = __webpack_require__(29);
+var _index = __webpack_require__(32);
+
+var _index2 = _interopRequireDefault(_index);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var PaperCheckbox = function (_React$Component) {
+  _inherits(PaperCheckbox, _React$Component);
+
+  function PaperCheckbox(props) {
+    _classCallCheck(this, PaperCheckbox);
+
+    var _this = _possibleConstructorReturn(this, (PaperCheckbox.__proto__ || Object.getPrototypeOf(PaperCheckbox)).call(this, props));
+
+    _this.state = {
+      selectedChecks: []
+    };
+
+    _this.handleOptionChange = _this.handleOptionChange.bind(_this);
+    return _this;
+  }
+
+  _createClass(PaperCheckbox, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      var preChecked = [];
+
+      if (this.props.checked) {
+        preChecked.push(this.props.checked);
+      }
+
+      this.setState({ selectedChecks: preChecked });
+    }
+  }, {
+    key: 'boxIsChecked',
+    value: function boxIsChecked(e) {
+      console.log('e is ', e);
+      if (this.state.selectedChecks.indexOf(e) > 0) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }, {
+    key: 'handleOptionChange',
+    value: function handleOptionChange(e) {
+      var component = this;
+      // let selectedChecks = this.state.selectedChecks;
+      //
+      // if (selectedChecks.indexOf(e) > 0) {
+      //   let index = selectedChecks.indexOf(e);
+      //   selectedChecks.splice(index, 1);
+      // }
+      // else {
+      //   selectedChecks.push(e);
+      // }
+      //
+      // this.setState({selectedChecks: selectedChecks});
+
+      if (component.props.callback) {
+        return component.props.callback(e);
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var children = this.props.children;
+
+      return _react2.default.createElement(
+        'fieldset',
+        { className: 'form-group' },
+        _react2.default.Children.map(children, function (child, i) {
+          return _react2.default.createElement(
+            'label',
+            { htmlFor: child.props.inputID, className: 'paper-check' },
+            _react2.default.createElement('input', { type: 'checkbox', id: child.props.inputID, value: child.props.val, checked: child.props.checked || _this2.boxIsChecked(child.props.val) ? true : false, onChange: _this2.handleOptionChange(child.props.val) }),
+            _react2.default.createElement(
+              'span',
+              null,
+              child.props.label,
+              ' check ? = ',
+              child.props.checked,
+              ' or ',
+              child.checked
+            )
+          );
+        })
+      );
+    }
+  }]);
+
+  return PaperCheckbox;
+}(_react2.default.Component);
+
+exports.default = PaperCheckbox;
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _index = __webpack_require__(33);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -829,7 +972,7 @@ var PaperInput = function (_React$Component) {
 exports.default = PaperInput;
 
 /***/ }),
-/* 13 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -845,7 +988,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _index = __webpack_require__(32);
+var _index = __webpack_require__(36);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -883,7 +1026,7 @@ var PaperForms = function (_React$Component) {
 exports.default = PaperForms;
 
 /***/ }),
-/* 14 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -899,7 +1042,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _index = __webpack_require__(30);
+var _index = __webpack_require__(34);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -935,10 +1078,8 @@ var PaperRadio = function (_React$Component) {
       this.setState({
         selectedOption: e.target.value
       });
-      console.log('wee');
 
       if (component.props.callback) {
-        console.log('has a callbak');
         return component.props.callback(e.target.value);
       }
     }
@@ -974,7 +1115,7 @@ var PaperRadio = function (_React$Component) {
 exports.default = PaperRadio;
 
 /***/ }),
-/* 15 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -990,7 +1131,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _index = __webpack_require__(31);
+var _index = __webpack_require__(35);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -1053,7 +1194,7 @@ var PaperSelect = function (_React$Component) {
 exports.default = PaperSelect;
 
 /***/ }),
-/* 16 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1069,7 +1210,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _index = __webpack_require__(33);
+var _index = __webpack_require__(37);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -1107,7 +1248,7 @@ var PaperColumn = function (_React$Component) {
 exports.default = PaperColumn;
 
 /***/ }),
-/* 17 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1123,7 +1264,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _index = __webpack_require__(34);
+var _index = __webpack_require__(38);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -1161,7 +1302,7 @@ var PaperLayout = function (_React$Component) {
 exports.default = PaperLayout;
 
 /***/ }),
-/* 18 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1177,7 +1318,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _index = __webpack_require__(35);
+var _index = __webpack_require__(39);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -1209,7 +1350,7 @@ var PaperTypography = function (_React$Component) {
 exports.default = PaperTypography;
 
 /***/ }),
-/* 19 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1228,7 +1369,7 @@ Object.defineProperty(exports, 'PaperButton', {
   }
 });
 
-var _Typography = __webpack_require__(10);
+var _Typography = __webpack_require__(11);
 
 Object.defineProperty(exports, 'PaperTypography', {
   enumerable: true,
@@ -1237,7 +1378,7 @@ Object.defineProperty(exports, 'PaperTypography', {
   }
 });
 
-var _Layout = __webpack_require__(9);
+var _Layout = __webpack_require__(10);
 
 Object.defineProperty(exports, 'PaperLayout', {
   enumerable: true,
@@ -1246,7 +1387,7 @@ Object.defineProperty(exports, 'PaperLayout', {
   }
 });
 
-var _Column = __webpack_require__(8);
+var _Column = __webpack_require__(9);
 
 Object.defineProperty(exports, 'PaperCol', {
   enumerable: true,
@@ -1255,7 +1396,7 @@ Object.defineProperty(exports, 'PaperCol', {
   }
 });
 
-var _Forms = __webpack_require__(7);
+var _Forms = __webpack_require__(8);
 
 Object.defineProperty(exports, 'PaperForm', {
   enumerable: true,
@@ -1264,7 +1405,7 @@ Object.defineProperty(exports, 'PaperForm', {
   }
 });
 
-var _Input = __webpack_require__(4);
+var _Input = __webpack_require__(5);
 
 Object.defineProperty(exports, 'PaperInput', {
   enumerable: true,
@@ -1273,7 +1414,7 @@ Object.defineProperty(exports, 'PaperInput', {
   }
 });
 
-var _Select = __webpack_require__(6);
+var _Select = __webpack_require__(7);
 
 Object.defineProperty(exports, 'PaperSelect', {
   enumerable: true,
@@ -1282,7 +1423,7 @@ Object.defineProperty(exports, 'PaperSelect', {
   }
 });
 
-var _Radio = __webpack_require__(5);
+var _Radio = __webpack_require__(6);
 
 Object.defineProperty(exports, 'PaperRadio', {
   enumerable: true,
@@ -1291,10 +1432,19 @@ Object.defineProperty(exports, 'PaperRadio', {
   }
 });
 
+var _Checkbox = __webpack_require__(4);
+
+Object.defineProperty(exports, 'PaperCheckbox', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Checkbox).default;
+  }
+});
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 20 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -1308,21 +1458,7 @@ exports.push([module.i, "button, .PaperButton {\n  align-self: center;\n  backgr
 
 
 /***/ }),
-/* 21 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, ".form-group > label, .form-group legend {\n  display: inline-block;\n  margin-bottom: .5rem;\n}\n\n.form-group input, .form-group select {\n  display: block;\n  background: 0 0;\n  color: #41403e;\n  outline: 0;\n  border-top-left-radius: 255px 15px;\n  border-top-right-radius: 15px 225px;\n  border-bottom-right-radius: 225px 15px;\n  border-bottom-left-radius: 15px 255px;\n  font-size: 1rem;\n  padding: .5rem .5rem;\n  border: 2px solid #41403e;\n}\n\n.form-group .input-block {\n  width: 100%;\n}\n\ninput.disabled, input[disabled], select.disabled, select[disabled] {\n  cursor: not-allowed;\n  opacity: .5;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -1336,20 +1472,6 @@ exports.push([module.i, ".form-group > label, .form-group legend {\n  display: i
 
 
 /***/ }),
-/* 23 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, ".form-group > label, .form-group legend {\n  display: inline-block;\n  margin-bottom: .5rem;\n}\n\n.form-group input, .form-group select {\n  display: block;\n  background: 0 0;\n  color: #41403e;\n  outline: 0;\n  border-top-left-radius: 255px 15px;\n  border-top-right-radius: 15px 225px;\n  border-bottom-right-radius: 225px 15px;\n  border-bottom-left-radius: 15px 255px;\n  font-size: 1rem;\n  padding: .5rem .5rem;\n  border: 2px solid #41403e;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
 /* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1358,7 +1480,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "form .form-group {\n  margin-bottom: 1rem;\n}\n", ""]);
+exports.push([module.i, ".form-group > label, .form-group legend {\n  display: inline-block;\n  margin-bottom: .5rem;\n}\n\n.form-group input, .form-group select {\n  display: block;\n  background: 0 0;\n  color: #41403e;\n  outline: 0;\n  border-top-left-radius: 255px 15px;\n  border-top-right-radius: 15px 225px;\n  border-bottom-right-radius: 225px 15px;\n  border-bottom-left-radius: 15px 255px;\n  font-size: 1rem;\n  padding: .5rem .5rem;\n  border: 2px solid #41403e;\n}\n\n.form-group .input-block {\n  width: 100%;\n}\n\ninput.disabled, input[disabled], select.disabled, select[disabled] {\n  cursor: not-allowed;\n  opacity: .5;\n}\n", ""]);
 
 // exports
 
@@ -1372,7 +1494,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".col {\n  padding: 1rem;\n}\n\n.col-4 {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 33.33333333%;\n  -ms-flex: 0 0 33.33333333%;\n  flex: 0 0 33.33333333%;\n  max-width: 33.33333333%;\n}\n\n.col-3 {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 25%;\n  -ms-flex: 0 0 25%;\n  flex: 0 0 25%;\n  max-width: 25%;\n}\n\n.col-9 {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 75%;\n  -ms-flex: 0 0 75%;\n  flex: 0 0 75%;\n  max-width: 75%;\n}\n\n.align-bottom {\n  -webkit-align-self: flex-end;\n  -ms-flex-item-align: end;\n  align-self: flex-end;\n}\n\n.align-middle {\n  -webkit-align-self: center;\n  -ms-flex-item-align: center;\n  -ms-grid-row-align: center;\n  align-self: center;\n}\n\n.align-top {\n  -webkit-align-self: flex-start;\n  -ms-flex-item-align: start;\n  align-self: flex-start;\n}\n\n\n\n@media (min-width: 1200px) {\n  .lg-10 {\n    -webkit-box-flex: 0;\n    -webkit-flex: 0 0 83.33333333%;\n    -ms-flex: 0 0 83.33333333%;\n    flex: 0 0 83.33333333%;\n    max-width: 83.33333333%;\n  }\n\n  .lg-2 {\n    -webkit-box-flex: 0;\n    -webkit-flex: 0 0 16.66666667%;\n    -ms-flex: 0 0 16.66666667%;\n    flex: 0 0 16.66666667%;\n    max-width: 16.66666667%;\n  }\n}\n\n@media (min-width: 992px) {\n  .md-8 {\n    -webkit-box-flex: 0;\n    -webkit-flex: 0 0 66.66666667%;\n    -ms-flex: 0 0 66.66666667%;\n    flex: 0 0 66.66666667%;\n    max-width: 66.66666667%;\n  }\n\n  .md-4 {\n    -webkit-box-flex: 0;\n    -webkit-flex: 0 0 33.33333333%;\n    -ms-flex: 0 0 33.33333333%;\n    flex: 0 0 33.33333333%;\n    max-width: 33.33333333%;\n  }\n\n\n}\n\n@media (min-width: 768px) {\n  .sm-6 {\n    -webkit-box-flex: 0;\n    -webkit-flex: 0 0 50%;\n    -ms-flex: 0 0 50%;\n    flex: 0 0 50%;\n    max-width: 50%;\n  }\n\n  .sm-5 {\n    -webkit-box-flex: 0;\n    -webkit-flex: 0 0 41.66666667%;\n    -ms-flex: 0 0 41.66666667%;\n    flex: 0 0 41.66666667%;\n    max-width: 41.66666667%;\n  }\n\n  .sm-4 {\n    -webkit-box-flex: 0;\n    -webkit-flex: 0 0 33.33333333%;\n    -ms-flex: 0 0 33.33333333%;\n    flex: 0 0 33.33333333%;\n    max-width: 33.33333333%;\n  }\n\n  .col-fill {\n    width: auto;\n    flex: 1 1 0px;\n  }\n}\n", ""]);
+exports.push([module.i, ".form-group > label, .form-group legend {\n  display: inline-block;\n  margin-bottom: .5rem;\n}\n\nfieldset.form-group {\n  border: none;\n  padding: 0;\n}\n\nlegend {\n  box-sizing: border-box;\n  color: inherit;\n  display: table;\n  max-width: 100%;\n  padding: 0;\n  white-space: normal;\n}\n\n.form-group .paper-check, .form-group .paper-radio {\n  display: block;\n  margin-bottom: .5rem;\n  cursor: pointer;\n}\n\n.form-group .paper-check input, .form-group .paper-radio input {\n  border: 0;\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n  display: none;\n}\n\n.form-group .paper-check input + span, .form-group .paper-radio input + span {\n  display: block;\n}\n\n.form-group .paper-check input[type=radio]:checked + span:before, .form-group .paper-radio input[type=radio]:checked + span:before {\n  background: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='%230071DE' d='M49.346,46.341c-3.79-2.005,3.698-10.294,7.984-8.89 c8.713,2.852,4.352,20.922-4.901,20.269c-4.684-0.33-12.616-7.405-14.38-11.818c-2.375-5.938,7.208-11.688,11.624-13.837 c9.078-4.42,18.403-3.503,22.784,6.651c4.049,9.378,6.206,28.09-1.462,36.276c-7.091,7.567-24.673,2.277-32.357-1.079 c-11.474-5.01-24.54-19.124-21.738-32.758c3.958-19.263,28.856-28.248,46.044-23.244c20.693,6.025,22.012,36.268,16.246,52.826 c-5.267,15.118-17.03,26.26-33.603,21.938c-11.054-2.883-20.984-10.949-28.809-18.908C9.236,66.096,2.704,57.597,6.01,46.371 c3.059-10.385,12.719-20.155,20.892-26.604C40.809,8.788,58.615,1.851,75.058,12.031c9.289,5.749,16.787,16.361,18.284,27.262 c0.643,4.698,0.646,10.775-3.811,13.746'></path></svg>\") left center no-repeat;\n}\n\n.form-group .paper-check input[type=radio] + span:before, .form-group .paper-radio input[type=radio] + span:before {\n  border-top-left-radius: 1rem 1rem;\n  border-top-right-radius: 1rem .6rem;\n  border-bottom-right-radius: 1rem .9rem;\n  border-bottom-left-radius: .7rem 1rem;\n}\n\n.form-group .paper-check input + span:before, .form-group .paper-radio input + span:before {\n  content: '';\n  display: inline-block;\n  position: relative;\n  width: 1rem;\n  height: 1rem;\n  border: 2px solid #41403e;\n  margin-right: .75em;\n  vertical-align: -.25em;\n}\n", ""]);
 
 // exports
 
@@ -1386,13 +1508,55 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".row {\n  margin-right: auto;\n  margin-left: auto;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-flow: row wrap;\n  -ms-flex-flow: row wrap;\n  flex-flow: row wrap;\n  margin-bottom: 1rem;\n}\n\n.row.flex-right {\n  -webkit-box-pack: end;\n  -webkit-justify-content: flex-end;\n  -ms-flex-pack: end;\n  justify-content: flex-end;\n}\n\n.row.flex-center {\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n}\n\n.row.flex-edges {\n  -webkit-box-pack: justify;\n  -webkit-justify-content: space-between;\n  -ms-flex-pack: justify;\n  justify-content: space-between;\n}\n\n.row.flex-spaces {\n  -webkit-justify-content: space-around;\n  -ms-flex-pack: distribute;\n  justify-content: space-around;\n}\n\n.row.flex-top {\n  -webkit-box-align: start;\n  -webkit-align-items: flex-start;\n  -ms-flex-align: start;\n  align-items: flex-start;\n}\n\n.row.flex-middle {\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n}\n\n.row.flex-bottom {\n  -webkit-box-align: end;\n  -webkit-align-items: flex-end;\n  -ms-flex-align: end;\n  align-items: flex-end;\n}\n", ""]);
+exports.push([module.i, ".form-group > label, .form-group legend {\n  display: inline-block;\n  margin-bottom: .5rem;\n}\n\n.form-group input, .form-group select {\n  display: block;\n  background: 0 0;\n  color: #41403e;\n  outline: 0;\n  border-top-left-radius: 255px 15px;\n  border-top-right-radius: 15px 225px;\n  border-bottom-right-radius: 225px 15px;\n  border-bottom-left-radius: 15px 255px;\n  font-size: 1rem;\n  padding: .5rem .5rem;\n  border: 2px solid #41403e;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 /* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "form .form-group {\n  margin-bottom: 1rem;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".col {\n  padding: 1rem;\n}\n\n.col-4 {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 33.33333333%;\n  -ms-flex: 0 0 33.33333333%;\n  flex: 0 0 33.33333333%;\n  max-width: 33.33333333%;\n}\n\n.col-3 {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 25%;\n  -ms-flex: 0 0 25%;\n  flex: 0 0 25%;\n  max-width: 25%;\n}\n\n.col-9 {\n  -webkit-box-flex: 0;\n  -webkit-flex: 0 0 75%;\n  -ms-flex: 0 0 75%;\n  flex: 0 0 75%;\n  max-width: 75%;\n}\n\n.align-bottom {\n  -webkit-align-self: flex-end;\n  -ms-flex-item-align: end;\n  align-self: flex-end;\n}\n\n.align-middle {\n  -webkit-align-self: center;\n  -ms-flex-item-align: center;\n  -ms-grid-row-align: center;\n  align-self: center;\n}\n\n.align-top {\n  -webkit-align-self: flex-start;\n  -ms-flex-item-align: start;\n  align-self: flex-start;\n}\n\n\n\n@media (min-width: 1200px) {\n  .lg-10 {\n    -webkit-box-flex: 0;\n    -webkit-flex: 0 0 83.33333333%;\n    -ms-flex: 0 0 83.33333333%;\n    flex: 0 0 83.33333333%;\n    max-width: 83.33333333%;\n  }\n\n  .lg-2 {\n    -webkit-box-flex: 0;\n    -webkit-flex: 0 0 16.66666667%;\n    -ms-flex: 0 0 16.66666667%;\n    flex: 0 0 16.66666667%;\n    max-width: 16.66666667%;\n  }\n}\n\n@media (min-width: 992px) {\n  .md-8 {\n    -webkit-box-flex: 0;\n    -webkit-flex: 0 0 66.66666667%;\n    -ms-flex: 0 0 66.66666667%;\n    flex: 0 0 66.66666667%;\n    max-width: 66.66666667%;\n  }\n\n  .md-4 {\n    -webkit-box-flex: 0;\n    -webkit-flex: 0 0 33.33333333%;\n    -ms-flex: 0 0 33.33333333%;\n    flex: 0 0 33.33333333%;\n    max-width: 33.33333333%;\n  }\n\n\n}\n\n@media (min-width: 768px) {\n  .sm-6 {\n    -webkit-box-flex: 0;\n    -webkit-flex: 0 0 50%;\n    -ms-flex: 0 0 50%;\n    flex: 0 0 50%;\n    max-width: 50%;\n  }\n\n  .sm-5 {\n    -webkit-box-flex: 0;\n    -webkit-flex: 0 0 41.66666667%;\n    -ms-flex: 0 0 41.66666667%;\n    flex: 0 0 41.66666667%;\n    max-width: 41.66666667%;\n  }\n\n  .sm-4 {\n    -webkit-box-flex: 0;\n    -webkit-flex: 0 0 33.33333333%;\n    -ms-flex: 0 0 33.33333333%;\n    flex: 0 0 33.33333333%;\n    max-width: 33.33333333%;\n  }\n\n  .col-fill {\n    width: auto;\n    flex: 1 1 0px;\n  }\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".row {\n  margin-right: auto;\n  margin-left: auto;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-flow: row wrap;\n  -ms-flex-flow: row wrap;\n  flex-flow: row wrap;\n  margin-bottom: 1rem;\n}\n\n.row.flex-right {\n  -webkit-box-pack: end;\n  -webkit-justify-content: flex-end;\n  -ms-flex-pack: end;\n  justify-content: flex-end;\n}\n\n.row.flex-center {\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n}\n\n.row.flex-edges {\n  -webkit-box-pack: justify;\n  -webkit-justify-content: space-between;\n  -ms-flex-pack: justify;\n  justify-content: space-between;\n}\n\n.row.flex-spaces {\n  -webkit-justify-content: space-around;\n  -ms-flex-pack: distribute;\n  justify-content: space-around;\n}\n\n.row.flex-top {\n  -webkit-box-align: start;\n  -webkit-align-items: flex-start;\n  -ms-flex-align: start;\n  align-items: flex-start;\n}\n\n.row.flex-middle {\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n}\n\n.row.flex-bottom {\n  -webkit-box-align: end;\n  -webkit-align-items: flex-end;\n  -ms-flex-align: end;\n  align-items: flex-end;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -1406,13 +1570,13 @@ exports.push([module.i, "a, button, input, option, p, select, table, tbody, td, 
 
 
 /***/ }),
-/* 28 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(20);
+var content = __webpack_require__(22);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -1437,69 +1601,7 @@ if(false) {
 }
 
 /***/ }),
-/* 29 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(21);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {"hmr":true}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(1)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../node_modules/css-loader/index.js!./index.css", function() {
-			var newContent = require("!!../../../node_modules/css-loader/index.js!./index.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 30 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(22);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {"hmr":true}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(1)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../node_modules/css-loader/index.js!./index.css", function() {
-			var newContent = require("!!../../../node_modules/css-loader/index.js!./index.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -1530,44 +1632,13 @@ if(false) {
 }
 
 /***/ }),
-/* 32 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(24);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {"hmr":true}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(1)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/css-loader/index.js!./index.css", function() {
-			var newContent = require("!!../../node_modules/css-loader/index.js!./index.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
 /* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(25);
+var content = __webpack_require__(24);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -1598,6 +1669,37 @@ if(false) {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
+var content = __webpack_require__(25);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../node_modules/css-loader/index.js!./index.css", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js!./index.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
 var content = __webpack_require__(26);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
@@ -1612,8 +1714,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/css-loader/index.js!./index.css", function() {
-			var newContent = require("!!../../node_modules/css-loader/index.js!./index.css");
+		module.hot.accept("!!../../../node_modules/css-loader/index.js!./index.css", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js!./index.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -1623,7 +1725,7 @@ if(false) {
 }
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -1654,7 +1756,100 @@ if(false) {
 }
 
 /***/ }),
-/* 36 */
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(28);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../node_modules/css-loader/index.js!./index.css", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js!./index.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(29);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../node_modules/css-loader/index.js!./index.css", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js!./index.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(30);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../node_modules/css-loader/index.js!./index.css", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js!./index.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 40 */
 /***/ (function(module, exports) {
 
 
