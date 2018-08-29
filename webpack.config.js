@@ -16,7 +16,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['env']
+            babelrc: true
           }
         }
       },
@@ -24,11 +24,22 @@ module.exports = {
         test: /\.css$/,
         include: path.resolve(__dirname, 'src'),
         exclude: /(node_modules|bower_components|build)/,
-        use: [ 'style-loader', 'css-loader' ]
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localIdentName: '[name]__[local]___[hash:base64:5]'
+            }
+          }
+        ]
       }
     ]
   },
   externals: {
-    'react': 'commonjs react'
+    react: 'commonjs react'
   }
 };
