@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 declare type Size = 'large' | 'small';
 export declare type Props = {
     size: Size;
-    buttonType: Size;
+    buttonType: string;
     buttonText: ReactNode;
 } & React.AllHTMLAttributes<HTMLButtonElement>;
 declare class PaperButton extends React.Component<Props> {
