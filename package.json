@@ -52,5 +52,8 @@
     "css"
   ],
   "author": "Ben Redden",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "react-live": "^1.11.0"
+  }
 }

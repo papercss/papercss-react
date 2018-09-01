@@ -1,12 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import { PaperButton } from 'react-paper-css';
+import Examples from './Examples';
 
 const App = () => (
   <div>
-    Hello!
-    <PaperButton />
+    <Examples />
   </div>
 );
 const root = document.getElementById('root');

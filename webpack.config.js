@@ -53,9 +53,6 @@ module.exports = {
       }
     ]
   },
-  externals: {
-    react: 'commonjs react'
-  },
   plugins: [
     new TimeFixPlugin(),
     new WebpackShellPlugin({
