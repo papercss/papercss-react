@@ -3,7 +3,7 @@ import css from './index.css';
 
 class PaperTypography extends React.Component {
   render() {
-
+    return null;
   }
 }
 

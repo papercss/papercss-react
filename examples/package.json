@@ -1,0 +1,17 @@
+{
+  "name": "papercss-react-examples-live",
+  "version": "0.0.1",
+  "description": "Examples for PaperCSS React",
+  "main": "./index.ts",
+  "scripts": {
+    "dev": "parcel ./src/index.html"
+  },
+  "dependencies": {
+    "@types/react": "file:../node_modules/@types/react",
+    "@types/react-dom": "^16.0.7",
+    "parcel": "^1.9.7",
+    "react": "file:../node_modules/react",
+    "react-dom": "^16.4.2",
+    "react-paper-css": "file:../src"
+  }
+}

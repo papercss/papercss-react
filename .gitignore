@@ -1,3 +1,7 @@
-
-node_modules/
+**/node_modules/
 .DS_Store
+
+yarn.lock
+package-lock.json
+examples/.cache
+examples/dist

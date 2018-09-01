@@ -1,4 +1,3 @@
-export { default as ReactPaperCSS } from './ReactPaperCSS';
 export { default as PaperButton } from './Buttons';
 export { default as PaperTypography } from './Typography';
 export { default as PaperLayout } from './Layout';

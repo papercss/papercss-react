@@ -1,4 +1,4 @@
-.PaperButton {
+.paperButton {
   align-self: center;
   background: 0 0;
   color: #41403e;
@@ -19,7 +19,7 @@
   font-family: Neucha, sans-serif;
 }
 
-.Large {
+.large {
   -webkit-box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, .2);
   -moz-box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, .2);
   box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, .2);
@@ -27,7 +27,7 @@
   padding: 1rem 1rem;
 }
 
-.Small {
+.small {
   -webkit-box-shadow: 10px 19px 17px -13px rgba(0, 0, 0, .2);
   -moz-box-shadow: 10px 19px 17px -13px rgba(0, 0, 0, .2);
   box-shadow: 10px 19px 17px -13px rgba(0, 0, 0, .2);
@@ -35,12 +35,12 @@
   padding: .5rem;
 }
 
-.PaperButton[disabled] {
+.paperButton[disabled] {
   cursor: not-allowed;
   opacity: .5;
 }
 
-.PaperButton:hover {
+.paperButton:hover {
   -webkit-box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, .3);
   -moz-box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, .3);
   box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, .3);
