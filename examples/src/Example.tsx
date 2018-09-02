@@ -1,3 +1,4 @@
+import pretty from "pretty";
 import React from "react";
 import AceEditor from "react-ace";
 import * as PaperCss from "react-paper-css";
@@ -8,20 +9,24 @@ import styled from "styled-components";
 import "brace/ext/language_tools";
 import "brace/mode/html";
 import "brace/mode/tsx";
-import "brace/theme/gruvbox";
+import "brace/theme/tomorrow_night";
 import babylon from "prettier/parser-babylon";
 import prettier from "prettier/standalone";
 // tslint:enable:no-submodule-imports
 
 const prettierPlugins = [babylon];
 
-function formatCode(code: string) {
+function formatSourceCode(code: string) {
   return code
     ? prettier.format(code, {
         parser: "babylon",
         plugins: prettierPlugins,
       })
     : "";
+}
+
+function formatHTML(markup: string) {
+  return pretty(markup.replace(/(.)<(\w)/g, "$1\n<$2"), { ocd: true });
 }
 
 const imports: Record<string, any> = {
@@ -49,7 +54,11 @@ const Editor = React.forwardRef(({ ...rest }: Record<string, any>, ref) => (
     maxLines={Infinity}
     fontSize={14}
     tabSize={2}
-    theme="gruvbox"
+    theme="tomorrow_night"
+    style={{
+      fontFamily: "Inconsolata",
+      lineHeight: 1.3,
+    }}
     width="100%"
     {...rest}
   />
@@ -118,7 +127,7 @@ class Example extends React.Component<ExampleProps, State> {
     error: any,
     { markup }: { markup: string }
   ) => {
-    this.setState({ markup: formatCode(markup) });
+    this.setState({ markup: formatHTML(markup) });
     this.setError(error);
   };
 

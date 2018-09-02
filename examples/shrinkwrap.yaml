@@ -11,11 +11,15 @@ dependencies:
   '@types/styled-components': 3.0.0
   babylon: 6.18.0
   brace: 0.11.1
+  condense-newlines: 0.2.1
   history: 4.7.2
   hoist-non-react-statics: 3.0.1
+  is-whitespace: 0.3.0
+  js-beautify: 1.8.1
   parcel: 1.9.7
   path-to-regexp: 2.4.0
   prettier: 1.14.2
+  pretty: 2.0.0
   react: 16.4.2
   react-ace: 6.1.4
   react-dom: 16.4.2
@@ -1367,6 +1371,16 @@ packages:
       '0': node >= 0.8
     resolution:
       integrity: sha512-27HBghJxjiZtIk3Ycvn/4kbJk/1uZuJFfuPEns6LaEvpvG1f0hTea8lilrouyo9mVc2GWdcEZ8OLoGmSADlrCw==
+  /condense-newlines/0.2.1:
+    dependencies:
+      extend-shallow: 2.0.1
+      is-whitespace: 0.3.0
+      kind-of: 3.2.2
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-PemFVTE5R10yUCyDsC9gaE0kxV8=
   /config-chain/1.1.11:
     dependencies:
       ini: 1.3.5
@@ -2670,6 +2684,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-ITvGim8FhRiYe4IQ5uHSkj7pVaPDrCTkNd3yq3cV7iZAcJdHTUMPMEHcqSOy9xZ9qFenQCvi+2wjH9a1nXqHww==
+  /is-whitespace/0.3.0:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-Fjnssb4DauxppUy7QBz77XEUq38=
   /is-windows/1.0.2:
     dev: false
     engines:
@@ -3986,6 +4006,16 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-McHPg0n1pIke+A/4VcaS2en+pTNjy4xF+Uuq86u/5dyDO59/TtFZtQ708QIRkEZ3qwKz3GVkVa6mpxK/CpB8Rg==
+  /pretty/2.0.0:
+    dependencies:
+      condense-newlines: 0.2.1
+      extend-shallow: 2.0.1
+      js-beautify: 1.8.1
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-rbx5YLe7/iiaVX3F9zdhmiINBqU=
   /private/0.1.8:
     dev: false
     engines:
@@ -5066,11 +5096,15 @@ specifiers:
   '@types/styled-components': ^3.0.0
   babylon: ^6.18.0
   brace: ^0.11.1
+  condense-newlines: ^0.2.1
   history: ^4.7.2
   hoist-non-react-statics: ^3.0.1
+  is-whitespace: ^0.3.0
+  js-beautify: ^1.8.1
   parcel: ^1.9.7
   path-to-regexp: ^2.4.0
   prettier: ^1.14.2
+  pretty: ^2.0.0
   react: ^16.4.2
   react-ace: ^6.1.4
   react-dom: ^16.4.2

@@ -16,9 +16,9 @@ const Example = (
     <h2>Props</h2>
     <pre>{props}</pre>
     <section>
-      A standard input with no label.
+      <span>A standard input with no label.</span>
       <PaperInput />
-      Block Level 100% width input.
+      <span>Block Level 100% width input.</span>
       <PaperInput block />
     </section>
   </>

@@ -1,5 +1,5 @@
 import React from "react";
 
-const Typography = <></>;
+const Example = <></>;
 
-export default Typography;
+export default Example;

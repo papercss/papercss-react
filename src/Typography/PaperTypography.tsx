@@ -1,10 +1,28 @@
 import React from "react";
 
-import css from "./index.css";
+import classNames from "../utils/classNames";
 
-class PaperTypography extends React.Component {
+import styles from "./styles.scss";
+
+type Props = {
+  as: keyof React.ReactHTML;
+  children: React.ReactNode;
+} & React.AllHTMLAttributes<HTMLDivElement>;
+class PaperTypography extends React.Component<Props> {
+  public static defaultProps = {
+    as: "div",
+  };
   public render() {
-    return null;
+    const { as, className, ...props } = this.props;
+    const ElementType = as;
+    return (
+      <ElementType
+        className={classNames(styles.typography, className)}
+        {...props}
+      >
+        {this.props.children}
+      </ElementType>
+    );
   }
 }
 

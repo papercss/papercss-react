@@ -9,3 +9,4 @@ declare module "prettier/standalone" {
 }
 
 declare module "prettier/parser-babylon";
+declare module "pretty";
