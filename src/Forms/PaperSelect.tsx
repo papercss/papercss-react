@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import css from './index.css';
+import styles from "./styles.css";
 
 type Props = {
   label: string;
@@ -15,17 +15,19 @@ class PaperSelect extends React.Component<Props> {
 
     if (label) {
       return (
-        <div className={'form-group'}>
-          <label className={inputSize} htmlFor={inputID}>
-            {label}
-          </label>
+        <div className={styles.formGroup}>
+          {label && (
+            <label className={inputSize} htmlFor={inputID}>
+              {label}
+            </label>
+          )}
           <select>{children}</select>
         </div>
       );
     }
 
     return (
-      <div className={'form-group'}>
+      <div className={"form-group"}>
         <select>{children}</select>
       </div>
     );

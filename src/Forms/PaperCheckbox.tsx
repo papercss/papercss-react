@@ -1,7 +1,8 @@
-import React from 'react';
-import css from './index.css';
+import React from "react";
 
-import { OptionChild, optionsFromChildren } from '../OptionChild';
+import { OptionChild, optionsFromChildren } from "./OptionChild";
+
+import styles from "./styles.css";
 
 export type Props = {
   checked: string;
@@ -15,7 +16,7 @@ type State = Readonly<{
 
 function makeInitialState({ checked }: Props): State {
   return {
-    selectedChecks: checked ? { [checked]: true } : {}
+    selectedChecks: checked ? { [checked]: true } : {},
   };
 }
 
@@ -27,12 +28,12 @@ class PaperCheckbox extends React.Component<Props, State> {
     const options = optionsFromChildren(this.props.children);
 
     return (
-      <fieldset className={'form-group'}>
+      <fieldset className={styles.formGroup}>
         {options.map(child => {
           const { inputID, val, label } = child.props;
 
           return (
-            <label key={inputID} className={'paper-check'}>
+            <label key={inputID} className={styles.paperCheck}>
               <input
                 type="checkbox"
                 id={inputID}
@@ -55,8 +56,8 @@ class PaperCheckbox extends React.Component<Props, State> {
     this.setState(({ selectedChecks }) => ({
       selectedChecks: {
         ...selectedChecks,
-        [changedKey]: !selectedChecks[changedKey]
-      }
+        [changedKey]: !selectedChecks[changedKey],
+      },
     }));
 
     if (callback) {

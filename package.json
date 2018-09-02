@@ -55,5 +55,9 @@
     "css"
   ],
   "author": "Ben Redden",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "postcss-loader": "^3.0.0",
+    "postcss-scss": "^2.0.0"
+  }
 }
