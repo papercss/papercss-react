@@ -56,7 +56,11 @@ class Example extends React.Component<{}, State> {
     const { error, markup, source } = this.state;
 
     return (
-      <>
+      <article
+        style={{
+          flex: 1,
+        }}
+      >
         <h1>PaperButton</h1>
         <ComponentContainer>
           <SourceRender
@@ -96,7 +100,7 @@ class Example extends React.Component<{}, State> {
             <pre>{error.toString()}</pre>
           </div>
         )}
-      </>
+      </article>
     );
   }
 
@@ -111,6 +115,10 @@ class Example extends React.Component<{}, State> {
   private handleSourceChange = (source: string) => this.setState({ source });
 
   private setError(error: Error) {
+    if (this.state.error === error) {
+      return;
+    }
+
     this.setState({ error });
     if (this.editor && this.editor.current) {
       const session = (this.editor.current as any).editor.getSession();

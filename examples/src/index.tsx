@@ -1,14 +1,15 @@
-import React from 'react';
-import { render } from 'react-dom';
+import React from "react";
+import { render } from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
-import Examples from './Examples';
+import Examples from "./Examples";
 
 const App = () => (
-  <div>
+  <Router>
     <Examples />
-  </div>
+  </Router>
 );
-const root = document.getElementById('root');
+const root = document.getElementById("root");
 
 if (root) {
   render(<App />, root);

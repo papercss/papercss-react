@@ -1,13 +1,15 @@
-import React from 'react';
-import styles from './index.scss';
-import classNames from '../utils/classNames';
+import React from "react";
+
+import classNames from "../utils/classNames";
+
+import styles from "./index.scss";
 
 type Props = {
-  flexPosition?: Exclude<keyof typeof styles, 'row'>;
+  flexPosition?: Exclude<keyof typeof styles, "row">;
 };
 
 class PaperLayout extends React.Component<Props> {
-  render() {
+  public render() {
     const { flexPosition } = this.props;
     return (
       <div
