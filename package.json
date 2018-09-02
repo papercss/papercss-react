@@ -3,7 +3,6 @@
   "version": "0.0.9",
   "description": "React Components for PaperCSS",
   "main": "./build/index.js",
-  "module": "./build/module/index.js",
   "typings": "./build/types/index.d.ts",
   "types": "./build/types/index.d.ts",
   "sideEffects": false,
@@ -17,7 +16,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --watch --mode development ",
-    "build": "rimraf build && tsc --module es6 && webpack --mode production",
+    "build": "rimraf build && webpack --mode production",
     "build:style-typings": "node scripts/generateStyleTypings.js"
   },
   "devDependencies": {

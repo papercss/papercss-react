@@ -4,6 +4,12 @@ import { PaperButton } from "react-paper-css";
 import AceEditor from "react-ace";
 import SourceRender from "react-source-render";
 
+// tslint:disable:no-submodule-imports
+import "brace/mode/html";
+import "brace/mode/tsx";
+import "brace/theme/gruvbox";
+// tslint:enable:no-submodule-imports
+
 const imports: Record<string, any> = {
   PaperButton,
   react: React,
@@ -54,7 +60,7 @@ class Example extends React.Component<{}, State> {
           showGutter={false}
           showPrintMargin={false}
           tabSize={2}
-          theme="github"
+          theme="gruvbox"
           value={markup}
           width="100%"
         />
@@ -66,7 +72,7 @@ class Example extends React.Component<{}, State> {
           name="jsx-editor"
           onChange={this.handleSourceChange}
           tabSize={2}
-          theme="github"
+          theme="gruvbox"
           value={source}
           width="100%"
         />
