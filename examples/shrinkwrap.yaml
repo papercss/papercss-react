@@ -9,7 +9,6 @@ dependencies:
   '@types/react-router-dom': 4.3.0
   '@types/styled-components': 3.0.0
   brace: 0.11.1
-  fs: 0.0.1-security
   history: 4.7.2
   hoist-non-react-statics: 3.0.1
   parcel: 1.9.7
@@ -2152,10 +2151,6 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-PYyt2Q2XZWn6g1qx+OSyOhBWBac=
-  /fs/0.0.1-security:
-    dev: false
-    resolution:
-      integrity: sha1-invTcYa23d84E/I4WLV+yq9eQdQ=
   /fsevents/1.2.4:
     bundledDependencies:
       - node-pre-gyp
@@ -5044,7 +5039,6 @@ specifiers:
   '@types/react-router-dom': ^4.3.0
   '@types/styled-components': ^3.0.0
   brace: ^0.11.1
-  fs: ^0.0.1-security
   history: ^4.7.2
   hoist-non-react-statics: ^3.0.1
   parcel: ^1.9.7

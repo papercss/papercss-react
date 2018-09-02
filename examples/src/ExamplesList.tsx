@@ -2,6 +2,7 @@ import React from "react";
 import { Link, Route } from "react-router-dom";
 import styled from "styled-components";
 
+import Example from "./Example";
 import * as examplesBarrel from "./examples";
 
 const Section = styled.section`
@@ -17,14 +18,21 @@ const Nav = styled.nav`
 
 const About = () => <div>"About"</div>;
 
-const examples = Object.entries(examplesBarrel).slice(1);
+console.log(examplesBarrel);
 
-const allExampleLinks = examples.map(([name]) => (
+const examples = Object.entries(examplesBarrel);
+delete examples.__esModule;
+
+const exampleLinks = examples.map(([name]) => (
   <Link to={`/${name}`}>{name}</Link>
 ));
 
-const allExampleRoutes = examples.map(([name, component]) => (
-  <Route path={`/${name}`} component={component} key={name} />
+const exampleComponents = examples.map(([name, source]) => () => (
+  <Example name={name} initialSource={source} />
+));
+
+const exampleRoutes = examples.map(([name], index) => (
+  <Route path={`/${name}`} component={exampleComponents[index]} key={name} />
 ));
 
 export default class ExamplesList extends React.Component {
@@ -33,10 +41,10 @@ export default class ExamplesList extends React.Component {
       <Section>
         <Nav>
           <Link to="/">About</Link>
-          {allExampleLinks}
+          {exampleLinks}
         </Nav>
         <Route exact path="/" component={About} />
-        {allExampleRoutes}
+        {exampleRoutes}
       </Section>
     );
   }

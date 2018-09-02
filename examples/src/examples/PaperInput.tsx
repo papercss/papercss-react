@@ -3,7 +3,7 @@ import { PaperInput } from "react-paper-css";
 
 import Example from "../Example";
 
-const Ex = (
+const Element = (
   <>
     A standard input with no label.
     <PaperInput />
