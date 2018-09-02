@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import classNames from '../../utils/classNames';
+import classNames from "../../utils/classNames";
 
-import css from './index.css';
+import css from "./index.css";
 
 type Props = {
   colSize?: string;
@@ -14,7 +14,7 @@ class PaperColumn extends React.Component<Props> {
     const { colSize, colDisplay } = this.props;
 
     return (
-      <div className={classNames('col', colSize, colDisplay)}>
+      <div className={classNames(css.col, colSize, colDisplay)}>
         {this.props.children}
       </div>
     );

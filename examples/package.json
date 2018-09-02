@@ -12,7 +12,9 @@
     "@babel/core": "^7.0.0",
     "@babel/preset-typescript": "^7.0.0",
     "@babel/standalone": "^7.0.0",
+    "@types/react": "^16.4.13",
     "@types/react-dom": "^16.0.7",
+    "@types/react-loadable": "^5.4.1",
     "@types/react-router-dom": "^4.3.0",
     "@types/styled-components": "^3.0.0",
     "brace": "^0.11.1",
@@ -34,5 +36,8 @@
     "stylis-rule-sheet": "^0.0.10",
     "value-equal": "^0.4.0",
     "warning": "^4.0.2"
+  },
+  "devDependencies": {
+    "typescript": "^3.0.3"
   }
 }

@@ -2,7 +2,9 @@ dependencies:
   '@babel/core': 7.0.0
   '@babel/preset-typescript': 7.0.0
   '@babel/standalone': 7.0.0
+  '@types/react': 16.4.13
   '@types/react-dom': 16.0.7
+  '@types/react-loadable': 5.4.1
   '@types/react-router-dom': 4.3.0
   '@types/styled-components': 3.0.0
   brace: 0.11.1
@@ -14,6 +16,7 @@ dependencies:
   react-ace: 6.1.4
   react-dom: 16.4.2
   react-is: 16.4.2
+  react-loadable: 5.5.0
   react-paper-css: 'link:..'
   react-router: 4.3.1
   react-router-dom: 4.3.1
@@ -24,6 +27,8 @@ dependencies:
   stylis-rule-sheet: 0.0.10
   value-equal: 0.4.0
   warning: 4.0.2
+devDependencies:
+  typescript: 3.0.3
 packages:
   /@babel/code-frame/7.0.0:
     dependencies:
@@ -212,6 +217,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-vaq4vMaJOaNgFff1t3LnHYr6vRa09vRspMkmLdXtFZmO1fwDI2snP+dpOkwrtlU8UC8qsqemCu4RmVM2OLq/fA==
+  /@types/react-loadable/5.4.1:
+    dependencies:
+      '@types/react': 16.4.13
+      '@types/webpack': 4.4.11
+    dev: false
+    resolution:
+      integrity: sha512-nBvsWjPfBHepN5LoK/wgaunZSK9LmkKsPYum+/QrEKzUAb1yoe1/dwqTH6ZrinHDjru9LgjvXOqek9hvbq4Skw==
   /@types/react-router-dom/4.3.0:
     dependencies:
       '@types/history': 4.7.0
@@ -245,6 +257,25 @@ packages:
     dev: false
     resolution:
       integrity: sha512-gauRCMTAZjTfns+acsd0A0buM2Dn3zbFyHTxGEkLGvvZXACEhFq4Al+mM6Nn92iDD3e0FWtrFil/DkH7cXl/Tg==
+  /@types/tapable/1.0.4:
+    dev: false
+    resolution:
+      integrity: sha512-78AdXtlhpCHT0K3EytMpn4JNxaf5tbqbLcbIRoQIHzpTIyjpxLQKRoxU55ujBXAtg3Nl2h/XWvfDa9dsMOd0pQ==
+  /@types/uglify-js/3.0.3:
+    dependencies:
+      source-map: 0.6.1
+    dev: false
+    resolution:
+      integrity: sha512-MAT0BW2ruO0LhQKjvlipLGCF/Yx0y/cj+tT67tK3QIQDrM2+9R78HgJ54VlrE8AbfjYJJBCQCEPM5ZblPVTuww==
+  /@types/webpack/4.4.11:
+    dependencies:
+      '@types/node': 10.9.4
+      '@types/tapable': 1.0.4
+      '@types/uglify-js': 3.0.3
+      source-map: 0.6.1
+    dev: false
+    resolution:
+      integrity: sha512-NdESmbpvVEtJgs15kyZYKr5ouLYPMYt9DNG5JEgCekbG/ezFLPCzf4XcAv8caOb+b7x6ieAuSt0eoR0UkSI7RA==
   /abbrev/1.1.1:
     dev: false
     resolution:
@@ -4070,6 +4101,14 @@ packages:
     dev: false
     resolution:
       integrity: sha512-rI3cGFj/obHbBz156PvErrS5xc6f1eWyTwyV4mo0vF2lGgXgS+mm7EKD5buLJq6jNgIagQescGSVG2YzgXt8Yg==
+  /react-loadable/5.5.0:
+    dependencies:
+      prop-types: 15.6.2
+    dev: false
+    peerDependencies:
+      react: '*'
+    resolution:
+      integrity: sha512-C8Aui0ZpMd4KokxRdVAm2bQtI03k2RMRNzOB+IipV3yxFTSVICv7WoUr5L9ALB5BmKO1iHgZtWM8EvYG83otdg==
   /react-router-dom/4.3.1:
     dependencies:
       history: 4.7.2
@@ -4821,6 +4860,13 @@ packages:
     dev: false
     resolution:
       integrity: sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+  /typescript/3.0.3:
+    dev: true
+    engines:
+      node: '>=4.2.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-kk80vLW9iGtjMnIv11qyxLqZm20UklzuR2tL0QAnDIygIUIemcZMxlMWudl9OOt76H3ntVzcTiddQ1/pAAJMYg==
   /ua-parser-js/0.7.18:
     dev: false
     resolution:
@@ -4994,7 +5040,9 @@ specifiers:
   '@babel/core': ^7.0.0
   '@babel/preset-typescript': ^7.0.0
   '@babel/standalone': ^7.0.0
+  '@types/react': ^16.4.13
   '@types/react-dom': ^16.0.7
+  '@types/react-loadable': ^5.4.1
   '@types/react-router-dom': ^4.3.0
   '@types/styled-components': ^3.0.0
   brace: ^0.11.1
@@ -5006,6 +5054,7 @@ specifiers:
   react-ace: ^6.1.4
   react-dom: ^16.4.2
   react-is: ^16.4.2
+  react-loadable: ^5.5.0
   react-paper-css: 'file:..'
   react-router: ^4.3.1
   react-router-dom: ^4.3.1
@@ -5014,5 +5063,6 @@ specifiers:
   styled-components: ^3.4.5
   stylis: ^3.5.3
   stylis-rule-sheet: ^0.0.10
+  typescript: ^3.0.3
   value-equal: ^0.4.0
   warning: ^4.0.2

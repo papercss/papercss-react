@@ -2,7 +2,7 @@ import React from "react";
 import { Link, Route } from "react-router-dom";
 import styled from "styled-components";
 
-import PaperButtonExample from "./PaperButtonExample";
+import * as examplesBarrel from "./examples";
 
 const Section = styled.section`
   display: flex;
@@ -17,16 +17,26 @@ const Nav = styled.nav`
 
 const About = () => <div>"About"</div>;
 
-export default class Examples extends React.Component {
+const examples = Object.entries(examplesBarrel).slice(1);
+
+const allExampleLinks = examples.map(([name]) => (
+  <Link to={`/${name}`}>{name}</Link>
+));
+
+const allExampleRoutes = examples.map(([name, component]) => (
+  <Route path={`/${name}`} component={component} key={name} />
+));
+
+export default class ExamplesList extends React.Component {
   public render() {
     return (
       <Section>
         <Nav>
           <Link to="/">About</Link>
-          <Link to="/button">Button</Link>
+          {allExampleLinks}
         </Nav>
         <Route exact path="/" component={About} />
-        <Route path="/button" component={PaperButtonExample} />
+        {allExampleRoutes}
       </Section>
     );
   }

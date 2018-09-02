@@ -2,17 +2,14 @@ import React from "react";
 import { render } from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 
-import Examples from "./Examples";
+import ExamplesList from "./ExamplesList";
 
 const App = () => (
-  <Router>
-    <Examples />
-  </Router>
+  <main>
+    <Router>
+      <ExamplesList />
+    </Router>
+  </main>
 );
-const root = document.getElementById("root");
 
-if (root) {
-  render(<App />, root);
-} else {
-  throw new Error('We need element with id="root"');
-}
+render(<App />, document.getElementById("root"));

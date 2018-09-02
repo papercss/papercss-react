@@ -1,9 +1,8 @@
 import React from "react";
-import * as PaperCss from "react-paper-css";
-import styled from "styled-components";
-
 import AceEditor from "react-ace";
+import * as PaperCss from "react-paper-css";
 import SourceRender from "react-source-render";
+import styled from "styled-components";
 
 // tslint:disable:no-submodule-imports
 import "brace/ext/language_tools";
@@ -18,18 +17,18 @@ const imports: Record<string, any> = {
 };
 const importResolver = (path: string) => imports[path];
 
-const initialState = {
-  error: null as Error | null,
-  markup: "",
-  source: `import React from "react";
-import { PaperButton } from "react-paper-css";
-const Example = <PaperButton>Click me!</PaperButton>;
-
-export default Example;
-`,
+export type ExampleProps = {
+  name: string;
+  initialSource: string;
 };
 
-type State = typeof initialState;
+const makeInitialState = (initialSource: string) => ({
+  error: null as Error | null,
+  markup: "",
+  source: initialSource,
+});
+
+type State = ReturnType<typeof makeInitialState>;
 
 const Editor = React.forwardRef(({ ...rest }: Record<string, any>, ref) => (
   <AceEditor
@@ -47,21 +46,19 @@ const ComponentContainer = styled.article`
   padding: 20px;
 `;
 
-class Example extends React.Component<{}, State> {
-  public readonly state = initialState;
-
+class Example extends React.Component<ExampleProps, State> {
+  public readonly state = makeInitialState(this.props.initialSource);
   private editor = React.createRef();
-
   public render() {
+    const { name } = this.props;
     const { error, markup, source } = this.state;
-
     return (
       <article
         style={{
           flex: 1,
         }}
       >
-        <h1>PaperButton</h1>
+        <h1>{name}</h1>
         <ComponentContainer>
           <SourceRender
             onError={this.handleRenderError}
@@ -118,7 +115,6 @@ class Example extends React.Component<{}, State> {
     if (this.state.error === error) {
       return;
     }
-
     this.setState({ error });
     if (this.editor && this.editor.current) {
       const session = (this.editor.current as any).editor.getSession();
