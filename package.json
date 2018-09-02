@@ -1,6 +1,6 @@
 {
   "name": "react-paper-css",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "React Components for PaperCSS",
   "main": "./build/index.js",
   "typings": "./build/types/index.d.ts",
