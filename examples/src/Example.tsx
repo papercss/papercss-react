@@ -9,7 +9,20 @@ import "brace/ext/language_tools";
 import "brace/mode/html";
 import "brace/mode/tsx";
 import "brace/theme/gruvbox";
+import babylon from "prettier/parser-babylon";
+import prettier from "prettier/standalone";
 // tslint:enable:no-submodule-imports
+
+const prettierPlugins = [babylon];
+
+function formatCode(code: string) {
+  return code
+    ? prettier.format(code, {
+        parser: "babylon",
+        plugins: prettierPlugins,
+      })
+    : "";
+}
 
 const imports: Record<string, any> = {
   react: React,
@@ -79,7 +92,7 @@ class Example extends React.Component<ExampleProps, State> {
           onChange={this.handleSourceChange}
           value={source}
         />
-        <h2>HTML</h2>
+        <h1>HTML</h1>
         <Editor
           editorProps={{ $blockScrolling: Infinity }}
           highlightActiveLine={false}
@@ -105,7 +118,7 @@ class Example extends React.Component<ExampleProps, State> {
     error: any,
     { markup }: { markup: string }
   ) => {
-    this.setState({ markup });
+    this.setState({ markup: formatCode(markup) });
     this.setError(error);
   };
 

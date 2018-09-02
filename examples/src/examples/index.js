@@ -7,3 +7,13 @@ export const PaperButton = fs.readFileSync(
   `${__dirname}/PaperButton.tsx`,
   "utf-8"
 );
+
+export const PaperInput = fs.readFileSync(
+  `${__dirname}/PaperInput.tsx`,
+  "utf-8"
+);
+
+export const Typography = fs.readFileSync(
+  `${__dirname}/Typography.tsx`,
+  "utf-8"
+);

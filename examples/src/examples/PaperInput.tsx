@@ -1,28 +1,27 @@
 import React from "react";
 import { PaperInput } from "react-paper-css";
 
-import Example from "../Example";
+const props = `
+type Props = {
+  block?: boolean;
+  label?: React.ReactNode;
+  inputSize?: string;
+  inputID?: string;
+  placeholder?: string;
+  disabled?: boolean;
+}`.trim();
 
-const Element = (
+const Example = (
   <>
-    A standard input with no label.
-    <PaperInput />
-    Block Level 100% width input.
-    <PaperInput block />
+    <h2>Props</h2>
+    <pre>{props}</pre>
+    <section>
+      A standard input with no label.
+      <PaperInput />
+      Block Level 100% width input.
+      <PaperInput block />
+    </section>
   </>
 );
 
-const PaperButton = () => (
-  <Example
-    name="PaperButton"
-    initialSource={`import React from "react";
-import { PaperButton } from "react-paper-css";
-  
-const Example = <PaperButton>Click me!</PaperButton>;
-
 export default Example;
-`}
-  />
-);
-
-export default PaperButton;

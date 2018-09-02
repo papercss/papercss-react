@@ -2,17 +2,20 @@ dependencies:
   '@babel/core': 7.0.0
   '@babel/preset-typescript': 7.0.0
   '@babel/standalone': 7.0.0
-  '@types/node': 10.9.4
+  '@types/babylon': 6.16.3
+  '@types/prettier': 1.13.2
   '@types/react': 16.4.13
   '@types/react-dom': 16.0.7
   '@types/react-loadable': 5.4.1
   '@types/react-router-dom': 4.3.0
   '@types/styled-components': 3.0.0
+  babylon: 6.18.0
   brace: 0.11.1
   history: 4.7.2
   hoist-non-react-statics: 3.0.1
   parcel: 1.9.7
   path-to-regexp: 2.4.0
+  prettier: 1.14.2
   react: 16.4.2
   react-ace: 6.1.4
   react-dom: 16.4.2
@@ -28,6 +31,7 @@ dependencies:
   value-equal: 0.4.0
   warning: 4.0.2
 devDependencies:
+  '@types/node': 10.9.4
   typescript: 3.0.3
 packages:
   /@babel/code-frame/7.0.0:
@@ -189,6 +193,16 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-KU/VDjC5RwtDUZiz3d+DHXJF2lp5hB9dn552TXIyptj8SH1vXmR40mG0JgGq03IlYsOgGfcv8xrLpSQ0YUMQdA==
+  /@types/babel-types/7.0.4:
+    dev: false
+    resolution:
+      integrity: sha512-WiZhq3SVJHFRgRYLXvpf65XnV6ipVHhnNaNvE8yCimejrGglkg38kEj0JcizqwSHxmPSjcTlig/6JouxLGEhGw==
+  /@types/babylon/6.16.3:
+    dependencies:
+      '@types/babel-types': 7.0.4
+    dev: false
+    resolution:
+      integrity: sha512-lyJ8sW1PbY3uwuvpOBZ9zMYKshMnQpXmeDHh8dj9j2nJm/xrW0FgB5gLSYOArj5X0IfaXnmhFoJnhS4KbqIMug==
   /@types/commander/2.12.2:
     dependencies:
       commander: 2.17.1
@@ -201,9 +215,12 @@ packages:
     resolution:
       integrity: sha512-1A/RUAX4VtmGzNTGLSfmiPxQ3XwUSe/1YN4lW9GRa+j307oFK6MPjhlvw6jEHDodUBIvSvrA7/iHDchr5LS+0Q==
   /@types/node/10.9.4:
-    dev: false
     resolution:
       integrity: sha512-fCHV45gS+m3hH17zgkgADUSi2RR1Vht6wOZ0jyHP8rjiQra9f+mIcgwPQHllmDocYOstIEbKlxbFDYlgrTPYqw==
+  /@types/prettier/1.13.2:
+    dev: false
+    resolution:
+      integrity: sha512-k6MCN8WuDiCj6O+UJsVMbrreZxkbrhQbO02oDj6yuRu8UAkp0MDdEcDKif8/gBKuJbT84kkO+VHQAqXkumEklg==
   /@types/prop-types/15.5.5:
     dependencies:
       '@types/react': 16.4.13
@@ -3962,6 +3979,13 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
+  /prettier/1.14.2:
+    dev: false
+    engines:
+      node: '>=4'
+    hasBin: true
+    resolution:
+      integrity: sha512-McHPg0n1pIke+A/4VcaS2en+pTNjy4xF+Uuq86u/5dyDO59/TtFZtQ708QIRkEZ3qwKz3GVkVa6mpxK/CpB8Rg==
   /private/0.1.8:
     dev: false
     engines:
@@ -5032,17 +5056,21 @@ specifiers:
   '@babel/core': ^7.0.0
   '@babel/preset-typescript': ^7.0.0
   '@babel/standalone': ^7.0.0
+  '@types/babylon': ^6.16.3
   '@types/node': ^10.9.4
+  '@types/prettier': ^1.13.2
   '@types/react': ^16.4.13
   '@types/react-dom': ^16.0.7
   '@types/react-loadable': ^5.4.1
   '@types/react-router-dom': ^4.3.0
   '@types/styled-components': ^3.0.0
+  babylon: ^6.18.0
   brace: ^0.11.1
   history: ^4.7.2
   hoist-non-react-statics: ^3.0.1
   parcel: ^1.9.7
   path-to-regexp: ^2.4.0
+  prettier: ^1.14.2
   react: ^16.4.2
   react-ace: ^6.1.4
   react-dom: ^16.4.2

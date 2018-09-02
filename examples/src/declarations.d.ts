@@ -3,3 +3,9 @@ declare module "react-source-render";
 
 declare module "*.css";
 declare module "*.scss";
+
+declare module "prettier/standalone" {
+  export * from "prettier";
+}
+
+declare module "prettier/parser-babylon";
