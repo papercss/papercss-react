@@ -7,8 +7,8 @@ import styles from './index.css';
 type Size = 'large' | 'small';
 
 function sizeToClass(size: Size): string;
-function sizeToClass(size: Exclude<string, Size>): '';
-function sizeToClass(size: string) {
+function sizeToClass(size: Exclude<string, Size> | undefined): '';
+function sizeToClass(size: string | undefined) {
   switch (size) {
     case 'large':
       return styles.large;
@@ -20,9 +20,9 @@ function sizeToClass(size: string) {
 }
 
 export type Props = {
-  size: Size;
-  buttonType: string; // deprecate?
-  buttonText: ReactNode; // deprecate?
+  size?: Size;
+  buttonType?: string; // deprecate?
+  buttonText?: ReactNode; // deprecate or rename to 'text'?
 } & React.AllHTMLAttributes<HTMLButtonElement>;
 
 class PaperButton extends React.Component<Props> {
