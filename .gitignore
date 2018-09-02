@@ -5,3 +5,5 @@ yarn.lock
 package-lock.json
 examples/.cache
 examples/dist
+build
+.vscode

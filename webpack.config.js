@@ -48,7 +48,13 @@ module.exports = {
         test: /\.tsx?$/,
         include: path.resolve(__dirname, 'src'),
         use: {
-          loader: 'ts-loader'
+          loader: 'ts-loader',
+          options: {
+            compilerOptions: {
+              declaration: true,
+              declarationDir: 'types'
+            }
+          }
         }
       }
     ]
