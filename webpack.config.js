@@ -39,7 +39,7 @@ module.exports = {
               modules: true,
               namedExport: true,
               camelCase: true,
-              localIdentName: "[name]__[local]___[hash:base64:5]",
+              localIdentName: "papercss_[local]___[hash:base64:5]",
             },
           },
           "sass-loader",
