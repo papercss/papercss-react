@@ -18,13 +18,14 @@ const Nav = styled.nav`
 
 const About = () => <div>"About"</div>;
 
-console.log(examplesBarrel);
-
-const examples = Object.entries(examplesBarrel);
-delete examples.__esModule;
+const mutableCopy = { ...examplesBarrel };
+delete mutableCopy.__esModule;
+const examples = Object.entries(mutableCopy);
 
 const exampleLinks = examples.map(([name]) => (
-  <Link to={`/${name}`}>{name}</Link>
+  <Link to={`/${name}`} key={name}>
+    {name}
+  </Link>
 ));
 
 const exampleComponents = examples.map(([name, source]) => () => (
