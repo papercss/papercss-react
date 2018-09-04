@@ -17,3 +17,8 @@ export const PaperTypography = fs.readFileSync(
   `${__dirname}/PaperTypography/PaperTypography.example.tsx`,
   "utf-8"
 );
+
+export const Heading = fs.readFileSync(
+  `${__dirname}/Heading/Heading.example.tsx`,
+  "utf-8"
+);
