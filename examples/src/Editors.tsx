@@ -14,6 +14,8 @@ import babylon from "prettier/parser-babylon";
 import prettier from "prettier/standalone";
 // tslint:enable:no-submodule-imports
 
+import { CODE_LINE_HEIGHT } from "./constants";
+
 const prettierPlugins = [babylon];
 
 function formatSourceCode(code: string) {
@@ -57,7 +59,7 @@ const Editor = React.forwardRef(({ ...rest }: Record<string, any>, ref) => (
     theme="tomorrow_night"
     style={{
       fontFamily: "Inconsolata",
-      lineHeight: 1.3,
+      lineHeight: CODE_LINE_HEIGHT,
     }}
     width="100%"
     {...rest}
@@ -68,19 +70,15 @@ const ComponentContainer = styled.article`
   padding: 20px;
 `;
 
-class Example extends React.Component<ExampleProps, State> {
+class Editors extends React.Component<ExampleProps, State> {
   public readonly state = makeInitialState(this.props.initialSource);
   private editor = React.createRef();
   public render() {
     const { name } = this.props;
     const { error, markup, source } = this.state;
     return (
-      <article
-        style={{
-          flex: 1,
-        }}
-      >
-        <h1>{name}</h1>
+      <article>
+        <h1>Try it</h1>
         <ComponentContainer>
           <SourceRender
             onError={this.handleRenderError}
@@ -164,4 +162,4 @@ class Example extends React.Component<ExampleProps, State> {
   };
 }
 
-export default Example;
+export default Editors;

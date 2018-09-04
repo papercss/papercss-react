@@ -8,10 +8,10 @@ export type PaperFormProps = React.AllHTMLAttributes<HTMLFormElement>;
 
 class PaperForms extends React.Component<PaperFormProps> {
   public render() {
+    const { className, ...rest } = this.props;
+
     return (
-      <form className={classNames(styles.formGroup, this.props.className)}>
-        {this.props.children}
-      </form>
+      <form className={classNames(styles.formGroup, className)} {...rest} />
     );
   }
 }

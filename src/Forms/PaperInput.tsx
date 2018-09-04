@@ -11,16 +11,24 @@ type Props = {
   inputID?: string;
   placeholder?: string;
   disabled?: boolean;
-};
+} & React.AllHTMLAttributes<HTMLDivElement>;
 
 class PaperInput extends React.Component<Props> {
   public render() {
-    const { block, label, inputID, placeholder, disabled } = this.props;
+    const {
+      block,
+      label,
+      inputID,
+      placeholder,
+      disabled,
+      className: propsClassName,
+      ...rest
+    } = this.props;
 
     const blockClass = block && styles.inputBlock;
 
     return (
-      <div className={styles.formGroup}>
+      <div className={classNames(styles.formGroup, propsClassName)} {...rest}>
         {label && (
           <label htmlFor={inputID} className={classNames(blockClass)}>
             {label}

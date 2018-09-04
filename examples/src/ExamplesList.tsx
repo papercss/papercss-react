@@ -1,40 +1,51 @@
 import React from "react";
+import PaperTypography from "react-paper-css";
 import { Link, Route } from "react-router-dom";
 import styled from "styled-components";
 
-import Example from "./Example";
-import * as examplesBarrel from "./examples";
-
+import * as docs from "./docs";
+import Editors from "./Editors";
 const Section = styled.section`
   display: flex;
   flex-direction: row;
 `;
 
-const Nav = styled.nav`
-  display: flex;
-  flex-direction: column;
-  width: 100px;
-`;
-
 const About = () => <div>"About"</div>;
 
-const mutableCopy = { ...examplesBarrel };
-delete mutableCopy.__esModule;
-const examples = Object.entries(mutableCopy);
+const examples = Object.entries(docs.examples);
 
-const exampleLinks = examples.map(([name]) => (
+const links = examples.map(([name]) => (
   <Link to={`/${name}`} key={name}>
     {name}
   </Link>
 ));
 
-const exampleComponents = examples.map(([name, source]) => () => (
-  <Example name={name} initialSource={source} />
+const pages = examples.map(([name, source]) => {
+  const Info = docs.documentationComponents[name];
+  return () => (
+    <section
+      style={{
+        flex: 1,
+      }}
+    >
+      <h1>{name}</h1>
+      {Info && <Info />}
+      <Editors name={name} initialSource={source} />
+    </section>
+  );
+});
+
+const routes = examples.map(([name], index) => (
+  <Route path={`/${name}`} component={pages[index]} key={name} />
 ));
 
-const exampleRoutes = examples.map(([name], index) => (
-  <Route path={`/${name}`} component={exampleComponents[index]} key={name} />
-));
+const Nav = styled((props: React.AllHTMLAttributes<HTMLDivElement>) => (
+  <PaperTypography as="nav" {...props} />
+))`
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+`;
 
 export default class ExamplesList extends React.Component {
   public render() {
@@ -42,10 +53,10 @@ export default class ExamplesList extends React.Component {
       <Section>
         <Nav>
           <Link to="/">About</Link>
-          {exampleLinks}
+          {links}
         </Nav>
         <Route exact path="/" component={About} />
-        {exampleRoutes}
+        {routes}
       </Section>
     );
   }

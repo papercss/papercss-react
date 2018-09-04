@@ -4,16 +4,16 @@
 import fs from "fs";
 
 export const PaperButton = fs.readFileSync(
-  `${__dirname}/PaperButton.tsx`,
+  `${__dirname}/PaperButton/PaperButton.example.tsx`,
   "utf-8"
 );
 
 export const PaperInput = fs.readFileSync(
-  `${__dirname}/PaperInput.tsx`,
+  `${__dirname}/PaperInput/PaperInput.example.tsx`,
   "utf-8"
 );
 
-export const Typography = fs.readFileSync(
-  `${__dirname}/Typography.tsx`,
+export const PaperTypography = fs.readFileSync(
+  `${__dirname}/PaperTypography/PaperTypography.example.tsx`,
   "utf-8"
 );

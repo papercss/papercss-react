@@ -10,3 +10,9 @@ declare module "prettier/standalone" {
 
 declare module "prettier/parser-babylon";
 declare module "pretty";
+
+declare module "prismjs/components/prism-core";
+declare module "prismjs/components/prism-clike";
+declare module "prismjs/components/prism-javascript";
+declare module "prismjs/components/prism-typescript";
+declare module "prismjs/themes/prism-tomorrow.css";

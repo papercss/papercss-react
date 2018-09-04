@@ -25,10 +25,11 @@ class PaperCheckbox extends React.Component<Props, State> {
 
   public render() {
     const { selectedChecks } = this.state;
-    const options = optionsFromChildren(this.props.children);
+    const { children, ...rest } = this.props;
+    const options = optionsFromChildren(children);
 
     return (
-      <fieldset className={styles.formGroup}>
+      <fieldset className={styles.formGroup} {...rest}>
         {options.map(child => {
           const { inputID, val, label } = child.props;
 
