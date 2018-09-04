@@ -1,5 +1,33 @@
+.heading {
+  @at-root h1#{&} {
+    font-size: 4rem;
+  }
+
+  @at-root h2#{&} {
+    font-size: 3rem;
+  }
+
+  @at-root h3#{&} {
+    font-size: 2rem;
+  }
+
+  @at-root h4#{&} {
+    font-size: 1.5rem;
+  }
+
+  @at-root h5#{&} {
+    font-size: 1rem;
+  }
+
+  @at-root h6#{&} {
+    font-size: .8rem;
+  }
+}
+
 .typography {
   font-family: 'Neucha', sans-serif;
+  font-size: 20px;
+  color: #41403e;
 
   a,
   button,
@@ -12,8 +40,7 @@
   td,
   th,
   thead,
-  tr,
-  * {
+  tr {
     font-family: 'Neucha', sans-serif;
   }
 
@@ -25,6 +52,7 @@
   h6 {
     font-family: 'Patrick Hand SC', sans-serif;
     font-weight: 400;
+    @extend .heading
   }
 
   ul,

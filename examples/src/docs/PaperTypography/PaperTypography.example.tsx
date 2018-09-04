@@ -4,7 +4,7 @@ import { PaperTypography } from "react-paper-css";
 const Example = (
   <>
     <PaperTypography>
-      <h1>Header.</h1>
+      <h1 style={{ margin: "5px 0 5px 0" }}>Header.</h1>
       Look at this text.
     </PaperTypography>
     Normal text here!
