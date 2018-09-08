@@ -13,7 +13,16 @@ const Section = styled.section`
   column-gap: 0;
 `;
 
-const About = () => <div>"About"</div>;
+const About = () => (
+  <section>
+    <ul>
+      <li>Ready for the component age!</li>
+      <li>No global styles</li>
+      <li>Easy to enhance and compose</li>
+      <li>Pretty pretty</li>
+    </ul>
+  </section>
+);
 
 const examples = Object.entries(docs.examples);
 

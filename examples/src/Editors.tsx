@@ -15,6 +15,7 @@ import prettier from "prettier/standalone";
 // tslint:enable:no-submodule-imports
 
 import { CODE_FONT_SIZE, CODE_LINE_HEIGHT } from "./constants";
+import { H4 } from "./Headings";
 
 const prettierPlugins = [babylon];
 
@@ -76,7 +77,7 @@ class Editors extends React.Component<EditorsProps, State> {
     const { error, markup, source } = this.state;
     return (
       <article>
-        <PaperCss.Heading as="h4">Try it</PaperCss.Heading>
+        <H4>Try it</H4>
         <ComponentContainer>
           <SourceRender
             onError={this.handleRenderError}
@@ -97,7 +98,7 @@ class Editors extends React.Component<EditorsProps, State> {
           onChange={this.handleSourceChange}
           value={source}
         />
-        <PaperCss.Heading as="h4">HTML</PaperCss.Heading>
+        <H4>HTML</H4>
         <Editor
           editorProps={{ $blockScrolling: Infinity }}
           highlightActiveLine={false}
