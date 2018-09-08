@@ -56,3 +56,40 @@
   font-size: .75rem;
   padding: .5rem;
 }
+
+.button[disabled] {
+  cursor: not-allowed;
+  opacity: .5;
+}
+
+.button:hover {
+  -webkit-box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, .3);
+  box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, .3);
+}
+
+.primary {
+  background-color: #c1c0bd;
+  border-color: #41403e;
+  color: #ffffff;
+}
+
+.secondary {
+  background-color: #deefff;
+  border-color: #0071de
+}
+
+.success {
+  background-color: #d0dbc2;
+  border-color: #86a361
+}
+
+.warning {
+  background-color: #f5f0c6;
+  border-color: #ddcd45
+}
+
+.danger {
+  background-color: #f0cbc9;
+  border-color: #a7342d
+}

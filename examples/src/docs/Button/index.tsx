@@ -1,23 +1,23 @@
 import React from "react";
 import { PaperTypography } from "react-paper-css";
 
-import HighlightedCode from "../../HighlightedCode";
+import PropsPresenter from "../../PropsPresenter";
 
-const BadgeDoc = () => (
+const ButtonDoc = () => (
   <PaperTypography>
     <p>
-      You can customize badges colors with primary, secondary, success, warning,
-      danger classes.
+      You can customize button colors with primary, secondary, success, warning,
+      danger classes or set button size with large or small.
     </p>
-    <HighlightedCode
+    <PropsPresenter
       code={`
 type Props = {
+  size?: 'small' | 'large';
   type?: 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
-  as?: keyof React.ReactHTML;
 } & React.AllHTMLAttributes<HTMLDivElement>;
 `}
     />
   </PaperTypography>
 );
 
-export default BadgeDoc;
+export default ButtonDoc;
