@@ -11,3 +11,5 @@ export * from "./Typography";
 export * from "./utils";
 import * as borderStyles from "./borderStyles";
 export { borderStyles };
+
+export * from "./common/types";

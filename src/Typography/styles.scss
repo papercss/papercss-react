@@ -28,10 +28,14 @@
   }
 }
 
-.typography {
+.text {
   font-family: 'Neucha', sans-serif;
   font-size: 20px;
   color: #41403e;
+}
+
+.typography {
+  @extend .text;
 
   a,
   button,

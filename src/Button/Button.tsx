@@ -1,5 +1,6 @@
 import React from "react";
 
+import { HTMLAttributes, Omit } from "../common/types";
 import classNames from "../utils/classNames";
 
 import styles from "./index.scss";
@@ -23,7 +24,7 @@ export function typeToClass(size: Type | undefined): string {
   }
 }
 
-export type Size = 'large' | 'small';
+export type Size = "large" | "small";
 
 function sizeToClass(size: string | undefined): string {
   switch (size) {
@@ -36,12 +37,10 @@ function sizeToClass(size: string | undefined): string {
   }
 }
 
-type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
-
 export type ButtonProps = {
   size?: Size;
   type?: Type;
-} & Omit<React.AllHTMLAttributes<HTMLButtonElement>, 'size'>;
+} & Omit<HTMLAttributes<HTMLButtonElement>, "size">;
 
 class Button extends React.Component<ButtonProps> {
   public render() {

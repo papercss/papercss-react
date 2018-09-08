@@ -3,20 +3,20 @@ import React from "react";
 import { HTMLAttributes } from "../common/types";
 import classNames from "../utils/classNames";
 
-import styles from "./styles.css";
+import styles from "./styles.scss";
 
 export type PaperProps<T extends HTMLElement = HTMLElement> = {
   as?: keyof React.ReactHTML;
 } & HTMLAttributes<T>;
 
-function Paper<T extends HTMLElement = HTMLElement>({
-  as: ElementType = "div",
+function Text<T extends HTMLElement = HTMLElement>({
+  as: ElementType = "span",
   className,
   ...rest
 }: PaperProps<T>) {
   return (
-    <ElementType className={classNames(styles.paper, className)} {...rest} />
+    <ElementType className={classNames(styles.text, className)} {...rest} />
   );
 }
 
-export default Paper;
+export default Text;

@@ -1,5 +1,6 @@
 import React from "react";
 
+import { HTMLAttributes } from "../common/types";
 import classNames from "../utils/classNames";
 
 import styles from "./styles.scss";
@@ -9,8 +10,8 @@ export type HeadingType = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 export type HeadingProps = {
   as: HeadingType;
   children: React.ReactNode;
-} & React.AllHTMLAttributes<HTMLDivElement>;
-class PaperHeading extends React.Component<HeadingProps> {
+} & HTMLAttributes<HTMLDivElement>;
+class Heading extends React.Component<HeadingProps> {
   public static defaultProps: Pick<HeadingProps, "as"> = {
     as: "h1",
   };
@@ -25,4 +26,4 @@ class PaperHeading extends React.Component<HeadingProps> {
   }
 }
 
-export default PaperHeading;
+export default Heading;
