@@ -39,3 +39,11 @@ yarn dev
 ```
 
 Then click or copy the link in your terminal to go to examples page.
+
+### Passible problems
+
+If you face an error `/papercss-react/examples/src/ExamplesList.tsx:42:32: Cannot resolve dependency 'react-paper-css'`
+the working solution is to add this dependency with:
+```
+yarn add file:../
+```
