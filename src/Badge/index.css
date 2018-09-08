@@ -17,22 +17,22 @@
   border-color: transparent
 }
 
-.badge.primary {
+.primary {
   background-color: #41403e
 }
 
-.badge.secondary {
+.secondary {
   background-color: #0071de
 }
 
-.badge.success {
+.success {
   background-color: #86a361
 }
 
-.badge.warning {
+.warning {
   background-color: #ddcd45
 }
 
-.badge.danger {
+.danger {
   background-color: #a7342d
 }

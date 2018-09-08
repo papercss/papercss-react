@@ -13,7 +13,7 @@ Install with NPM `npm install --save react-paper-css`
 Just import whichever components you would like to use, like below:
 
 ```
-import {PaperButton, PaperLayout, PaperCol, PaperForm, PaperInput, PaperSelect, PaperRadio, PaperCheckbox} from 'react-paper-css';
+import { Button, Badge, PaperLayout, PaperCol, PaperForm, PaperInput, PaperSelect, PaperRadio, PaperCheckbox} from 'react-paper-css';
 ```
 
 ### Developing
