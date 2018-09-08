@@ -3,8 +3,8 @@
 
 import fs from "fs";
 
-export const PaperButton = fs.readFileSync(
-  `${__dirname}/PaperButton/PaperButton.example.tsx`,
+export const Button = fs.readFileSync(
+  `${__dirname}/Button/Button.example.tsx`,
   "utf-8"
 );
 
@@ -28,7 +28,7 @@ export const Paper = fs.readFileSync(
   "utf-8"
 );
 
-export const PaperBadge = fs.readFileSync(
-  `${__dirname}/PaperBadge/PaperBadge.example.tsx`,
+export const Badge = fs.readFileSync(
+  `${__dirname}/Badge/Badge.example.tsx`,
   "utf-8"
 );
