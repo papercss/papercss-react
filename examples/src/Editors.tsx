@@ -37,8 +37,7 @@ const imports: Record<string, any> = {
 };
 const importResolver = (path: string) => imports[path];
 
-export type ExampleProps = {
-  name: string;
+export type EditorsProps = {
   initialSource: string;
 };
 
@@ -70,15 +69,14 @@ const ComponentContainer = styled.article`
   padding: 20px;
 `;
 
-class Editors extends React.Component<ExampleProps, State> {
+class Editors extends React.Component<EditorsProps, State> {
   public readonly state = makeInitialState(this.props.initialSource);
   private editor = React.createRef();
   public render() {
-    const { name } = this.props;
     const { error, markup, source } = this.state;
     return (
       <article>
-        <h1>Try it</h1>
+        <PaperCss.Heading as="h4">Try it</PaperCss.Heading>
         <ComponentContainer>
           <SourceRender
             onError={this.handleRenderError}
@@ -99,7 +97,7 @@ class Editors extends React.Component<ExampleProps, State> {
           onChange={this.handleSourceChange}
           value={source}
         />
-        <h1>HTML</h1>
+        <PaperCss.Heading as="h4">HTML</PaperCss.Heading>
         <Editor
           editorProps={{ $blockScrolling: Infinity }}
           highlightActiveLine={false}

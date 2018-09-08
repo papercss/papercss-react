@@ -22,3 +22,8 @@ export const Heading = fs.readFileSync(
   `${__dirname}/Heading/Heading.example.tsx`,
   "utf-8"
 );
+
+export const Paper = fs.readFileSync(
+  `${__dirname}/Paper/Paper.example.tsx`,
+  "utf-8"
+);

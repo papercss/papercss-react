@@ -9,7 +9,7 @@ type Props = {
   children: React.ReactNode;
 } & React.AllHTMLAttributes<HTMLDivElement>;
 class PaperTypography extends React.Component<Props> {
-  public static defaultProps = {
+  public static defaultProps: Pick<Props, "as"> = {
     as: "div",
   };
   public render() {

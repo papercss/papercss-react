@@ -1,5 +1,5 @@
 import React from "react";
-import { PaperTypography } from "react-paper-css";
+import { Heading, PaperTypography } from "react-paper-css";
 import { Link, Route } from "react-router-dom";
 import styled from "styled-components";
 
@@ -7,7 +7,7 @@ import * as docs from "./docs";
 import Editors from "./Editors";
 const Section = styled.section`
   display: grid;
-  grid-template-columns: 120px 1fr 0;
+  grid-template-columns: 1fr 3fr 0;
   column-gap: 20px;
 `;
 
@@ -17,20 +17,16 @@ const examples = Object.entries(docs.examples);
 
 const links = examples.map(([name]) => (
   <div key={name}>
-    <Link to={`/${name}`}>{name.replace("Paper", "")}</Link>
+    <Link to={`/${name}`}>{name}</Link>
   </div>
 ));
 const pages = examples.map(([name, source]) => {
   const Info = docs.documentationComponents[name];
   return () => (
-    <section
-      style={{
-        flex: 1,
-      }}
-    >
-      <h1>{name}</h1>
+    <section>
+      <Heading as="h3">{name}</Heading>
       {Info && <Info />}
-      <Editors name={name} initialSource={source} />
+      <Editors initialSource={source} />
     </section>
   );
 });
@@ -42,7 +38,7 @@ const routes = examples.map(([name], index) => (
 const Nav = styled((props: React.AllHTMLAttributes<HTMLDivElement>) => (
   <PaperTypography as="nav" {...props} />
 ))`
-  width: 120px;
+  min-width: 120px;
 `;
 
 const H4 = styled.h4`
@@ -65,8 +61,14 @@ export default class ExamplesList extends React.Component {
           <H4>Components</H4>
           {links}
         </Nav>
-        <Route exact path="/" component={About} />
-        {routes}
+        <article
+          style={{
+            maxWidth: "1000px",
+          }}
+        >
+          <Route exact path="/" component={About} />
+          {routes}
+        </article>
       </Section>
     );
   }

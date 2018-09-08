@@ -14,7 +14,7 @@
     "react": "^16.4.2"
   },
   "scripts": {
-    "start": "webpack --watch --mode development ",
+    "watch": "webpack --watch --mode development ",
     "build": "rimraf build && webpack --mode production",
     "build:style-typings": "node scripts/generateStyleTypings.js"
   },
