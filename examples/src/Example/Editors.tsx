@@ -14,8 +14,8 @@ import babylon from "prettier/parser-babylon";
 import prettier from "prettier/standalone";
 // tslint:enable:no-submodule-imports
 
-import { CODE_FONT_SIZE, CODE_LINE_HEIGHT } from "./constants";
-import { H4 } from "./Headings";
+import { CODE_FONT_SIZE, CODE_LINE_HEIGHT } from "../constants";
+import { H4 } from "../Headings";
 
 const prettierPlugins = [babylon];
 
@@ -40,6 +40,8 @@ const importResolver = (path: string) => imports[path];
 
 export type EditorsProps = {
   initialSource: string;
+  showSource: boolean;
+  showMarkup: boolean;
 };
 
 const makeInitialState = (initialSource: string) => ({
@@ -75,10 +77,11 @@ class Editors extends React.Component<EditorsProps, State> {
   private editor = React.createRef();
   public render() {
     const { error, markup, source } = this.state;
+    const { showSource, showMarkup } = this.props;
+
     return (
       <article>
-        <H4>Try it</H4>
-        <ComponentContainer>
+        <PaperCss.Paper>
           <SourceRender
             onError={this.handleRenderError}
             onSuccess={this.handleRenderSuccess}
@@ -86,31 +89,37 @@ class Editors extends React.Component<EditorsProps, State> {
             source={source}
             babelConfig={{}}
           />
-        </ComponentContainer>
-        <Editor
-          ref={this.editor}
-          editorProps={{ $blockScrolling: Infinity }}
-          enableLiveAutocompletion={true}
-          enableBasicAutocompletion={true}
-          minLines={10}
-          mode="tsx"
-          name="tsx-editor"
-          onChange={this.handleSourceChange}
-          value={source}
-        />
-        <H4>HTML</H4>
-        <Editor
-          editorProps={{ $blockScrolling: Infinity }}
-          highlightActiveLine={false}
-          highlightGutterLine={false}
-          mode="html"
-          name="html-editor"
-          readOnly={true}
-          showCursor={false}
-          showGutter={false}
-          showPrintMargin={false}
-          value={markup}
-        />
+        </PaperCss.Paper>
+        {showSource && (
+          <Editor
+            ref={this.editor}
+            editorProps={{ $blockScrolling: Infinity }}
+            enableLiveAutocompletion={true}
+            enableBasicAutocompletion={true}
+            minLines={10}
+            mode="tsx"
+            name="tsx-editor"
+            onChange={this.handleSourceChange}
+            value={source}
+          />
+        )}
+        {showMarkup && (
+          <>
+            <H4>HTML</H4>
+            <Editor
+              editorProps={{ $blockScrolling: Infinity }}
+              highlightActiveLine={false}
+              highlightGutterLine={false}
+              mode="html"
+              name="html-editor"
+              readOnly={true}
+              showCursor={false}
+              showGutter={false}
+              showPrintMargin={false}
+              value={markup}
+            />
+          </>
+        )}
         {error && (
           <div>
             <pre>{error.toString()}</pre>

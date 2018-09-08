@@ -4,7 +4,7 @@ import { Button, PaperTypography } from "react-paper-css";
 const Example = (
   <>
     <PaperTypography>
-      <h3>Different sizes</h3>
+      <div>Different sizes</div>
       <ButtonBox columns={3}>
         <Button>Default</Button>
         <Button size="small">Small</Button>
@@ -12,11 +12,11 @@ const Example = (
       </ButtonBox>
     </PaperTypography>
     <PaperTypography>
-      <h3>Disabled button</h3>
+      <div>Disabled button</div>
       <Button disabled={true}>Disabled</Button>
     </PaperTypography>
     <PaperTypography>
-      <h3>Colors</h3>
+      <div>Colors</div>
       <ButtonBox columns={5}>
         <Button type="primary">Primary</Button>
         <Button type="secondary">Secondary</Button>

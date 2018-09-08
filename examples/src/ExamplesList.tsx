@@ -1,10 +1,10 @@
 import React from "react";
-import { borderStyles, Heading, PaperTypography } from "react-paper-css";
+import { borderStyles, Paper, PaperTypography } from "react-paper-css";
 import { Link, Route } from "react-router-dom";
 import styled from "styled-components";
 
 import * as docs from "./docs";
-import Editors from "./Editors";
+import Example from "./Example";
 import { H3, H4 } from "./Headings";
 const Section = styled.section`
   height: 100%;
@@ -31,14 +31,13 @@ const links = examples.map(([name]) => (
     <Link to={`/${name}`}>{name}</Link>
   </div>
 ));
+
 const pages = examples.map(([name, source]) => {
   const Info = docs.documentationComponents[name];
   return () => (
-    <section>
-      <Heading as="h3">{name}</Heading>
+    <Example name={name} source={source}>
       {Info && <Info />}
-      <Editors initialSource={source} />
-    </section>
+    </Example>
   );
 });
 

@@ -7,6 +7,7 @@ import ExamplesList from "./ExamplesList";
 const App = () => (
   <main
     style={{
+      backgroundImage: "url(https://www.getpapercss.com/img/geometry2.png)",
       height: "100%",
     }}
   >

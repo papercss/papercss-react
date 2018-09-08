@@ -39,6 +39,10 @@
     border-color: hsla(0, 0%, 0%, 0.2);
     transition: none;
   }
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
 }
 
 .large {
