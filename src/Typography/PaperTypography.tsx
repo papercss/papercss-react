@@ -7,7 +7,6 @@ import styles from "./styles.scss";
 
 type Props = {
   as: keyof React.ReactHTML;
-  children: React.ReactNode;
 } & HTMLAttributes<HTMLDivElement>;
 class PaperTypography extends React.Component<Props> {
   public static defaultProps: Pick<Props, "as"> = {

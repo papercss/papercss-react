@@ -40,7 +40,7 @@ const routes = examples.map(([name], index) => (
 console.table(borderStyles);
 
 const Nav = styled((props: React.AllHTMLAttributes<HTMLDivElement>) => (
-  <PaperTypography as="nav" {...props} />
+  <PaperTypography {...props} as="nav" />
 ))`
   min-width: 120px;
 `;
