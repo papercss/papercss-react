@@ -1,6 +1,6 @@
 {
   "name": "react-paper-css",
-  "version": "0.0.6",
+  "version": "0.0.6-rc1",
   "description": "React Components for PaperCSS",
   "main": "./build/index.js",
   "typings": "./build/types/index.d.ts",
@@ -57,6 +57,7 @@
   "author": "Ben Redden",
   "license": "ISC",
   "dependencies": {
+    "@types/react": "^16.4.13",
     "postcss-loader": "^3.0.0",
     "postcss-scss": "^2.0.0"
   }
