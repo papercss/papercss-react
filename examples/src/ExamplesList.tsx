@@ -1,15 +1,11 @@
 import React from "react";
-import {
-  borderStyles,
-  classNames,
-  Heading,
-  PaperTypography,
-} from "react-paper-css";
+import { borderStyles, Heading, PaperTypography } from "react-paper-css";
 import { Link, Route } from "react-router-dom";
 import styled from "styled-components";
 
 import * as docs from "./docs";
 import Editors from "./Editors";
+import { H3, H4 } from "./Headings";
 const Section = styled.section`
   height: 100%;
   display: grid;
@@ -47,16 +43,6 @@ const Nav = styled((props: React.AllHTMLAttributes<HTMLDivElement>) => (
   <PaperTypography as="nav" {...props} />
 ))`
   min-width: 120px;
-`;
-
-const H4 = styled.h4`
-  margin: 5px 0 8px 0;
-  user-select: none;
-`;
-
-const H3 = styled.h3`
-  margin: 0 0 12px 0;
-  user-select: none;
 `;
 
 export default class ExamplesList extends React.Component {

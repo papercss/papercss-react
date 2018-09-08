@@ -4,12 +4,14 @@ import classNames from "../utils/classNames";
 
 import styles from "./styles.scss";
 
-type Props = {
-  as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+export type HeadingType = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+
+export type HeadingProps = {
+  as: HeadingType;
   children: React.ReactNode;
 } & React.AllHTMLAttributes<HTMLDivElement>;
-class PaperHeading extends React.Component<Props> {
-  public static defaultProps = {
+class PaperHeading extends React.Component<HeadingProps> {
+  public static defaultProps: Pick<HeadingProps, "as"> = {
     as: "h1",
   };
   public render() {

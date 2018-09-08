@@ -1,12 +1,13 @@
-const path = require("path");
 const webpack = require("webpack");
 const WebpackShellPlugin = require("webpack-shell-plugin-next");
 const TimeFixPlugin = require("time-fix-plugin");
 
+const { OUTPUT_PATH, SRC_PATH } = require("./config");
+
 module.exports = {
   entry: "./src/index.ts",
   output: {
-    path: path.resolve(__dirname, "build"),
+    path: OUTPUT_PATH,
     filename: "index.js",
     library: "ReactPaperCSS",
     libraryTarget: "commonjs2",
@@ -18,7 +19,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        include: path.resolve(__dirname, "src"),
+        include: SRC_PATH,
         exclude: /(node_modules|bower_components|build)/,
         use: {
           loader: "babel-loader",
@@ -29,7 +30,7 @@ module.exports = {
       },
       {
         test: /\.s?css$/,
-        include: path.resolve(__dirname, "src"),
+        include: SRC_PATH,
         exclude: /(node_modules|bower_components|build)/,
         use: [
           "style-loader",
@@ -48,7 +49,7 @@ module.exports = {
       },
       {
         test: /\.tsx?$/,
-        include: path.resolve(__dirname, "src"),
+        include: SRC_PATH,
         use: {
           loader: "ts-loader",
           options: {
