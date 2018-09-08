@@ -14,7 +14,7 @@ import babylon from "prettier/parser-babylon";
 import prettier from "prettier/standalone";
 // tslint:enable:no-submodule-imports
 
-import { CODE_LINE_HEIGHT } from "./constants";
+import { CODE_FONT_SIZE, CODE_LINE_HEIGHT } from "./constants";
 
 const prettierPlugins = [babylon];
 
@@ -53,7 +53,7 @@ const Editor = React.forwardRef(({ ...rest }: Record<string, any>, ref) => (
   <AceEditor
     ref={ref}
     maxLines={Infinity}
-    fontSize={14}
+    fontSize={CODE_FONT_SIZE}
     tabSize={2}
     theme="tomorrow_night"
     style={{

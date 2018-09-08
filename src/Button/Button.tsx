@@ -1,19 +1,19 @@
-import React from 'react';
+import React from "react";
 
-import classNames from '../utils/classNames';
+import classNames from "../utils/classNames";
 
-import styles from './index.css';
+import styles from "./index.css";
 
-type Size = 'large' | 'small';
+type Size = "large" | "small";
 
 function sizeToClass(size: string | undefined): string {
   switch (size) {
-    case 'large':
+    case "large":
       return styles.large;
-    case 'small':
+    case "small":
       return styles.small;
     default:
-      return '';
+      return "";
   }
 }
 
