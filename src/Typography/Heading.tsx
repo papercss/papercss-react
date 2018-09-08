@@ -17,7 +17,6 @@ class Heading extends React.Component<HeadingProps> {
   };
   public render() {
     const { as, className, ...props } = this.props;
-    console.log({ className }, classNames(styles.heading, className));
     const ElementType = as;
     return (
       <ElementType className={classNames(styles.heading, className)} {...props}>

@@ -40,7 +40,7 @@ module.exports = {
               modules: true,
               namedExport: true,
               camelCase: true,
-              localIdentName: "papercss_[local]___[hash:base64:5]",
+              localIdentName: "pprcss_[local]_[hash:base64:5]",
               importLoaders: 1,
             },
           },
