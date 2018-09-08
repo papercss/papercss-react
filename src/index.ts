@@ -7,3 +7,7 @@ export { default as Paper } from "./Paper";
 export { default as Badge } from "./Badge";
 export * from "./Forms";
 export * from "./Typography";
+
+export * from "./utils";
+import * as borderStyles from "./borderStyles";
+export { borderStyles };

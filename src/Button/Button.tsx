@@ -2,7 +2,7 @@ import React from "react";
 
 import classNames from "../utils/classNames";
 
-import styles from "./index.css";
+import styles from "./index.scss";
 
 type Size = "large" | "small";
 

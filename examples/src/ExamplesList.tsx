@@ -1,14 +1,20 @@
 import React from "react";
-import { Heading, PaperTypography } from "react-paper-css";
+import {
+  borderStyles,
+  classNames,
+  Heading,
+  PaperTypography,
+} from "react-paper-css";
 import { Link, Route } from "react-router-dom";
 import styled from "styled-components";
 
 import * as docs from "./docs";
 import Editors from "./Editors";
 const Section = styled.section`
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr 3fr 0;
-  column-gap: 20px;
+  column-gap: 0;
 `;
 
 const About = () => <div>"About"</div>;
@@ -34,6 +40,8 @@ const pages = examples.map(([name, source]) => {
 const routes = examples.map(([name], index) => (
   <Route path={`/${name}`} component={pages[index]} key={name} />
 ));
+
+console.table(borderStyles);
 
 const Nav = styled((props: React.AllHTMLAttributes<HTMLDivElement>) => (
   <PaperTypography as="nav" {...props} />
@@ -63,6 +71,7 @@ export default class ExamplesList extends React.Component {
         </Nav>
         <article
           style={{
+            height: "100%",
             maxWidth: "1000px",
           }}
         >

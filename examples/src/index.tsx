@@ -5,7 +5,11 @@ import { BrowserRouter as Router } from "react-router-dom";
 import ExamplesList from "./ExamplesList";
 
 const App = () => (
-  <main>
+  <main
+    style={{
+      height: "100%",
+    }}
+  >
     <Router>
       <ExamplesList />
     </Router>
