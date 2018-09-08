@@ -4,29 +4,29 @@ import classNames from '../utils/classNames';
 
 import styles from './index.css';
 
-type Type = 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
+export type Type = "primary" | "secondary" | "success" | "warning" | "danger";
 
-function typeToClass(size: Type | undefined): string {
+export function typeToClass(size: Type | undefined): string {
   switch (size) {
-    case 'primary':
+    case "primary":
       return styles.primary;
-    case 'secondary':
+    case "secondary":
       return styles.secondary;
-    case 'success':
+    case "success":
       return styles.success;
-    case 'warning':
+    case "warning":
       return styles.warning;
-    case 'danger':
+    case "danger":
       return styles.danger;
     default:
-      return '';
+      return "";
   }
 }
 
 export type Props = {
   as: keyof React.ReactHTML;
   type?: Type;
-} & React.AllHTMLAttributes<HTMLButtonElement>;
+} & React.AllHTMLAttributes<HTMLElement>;
 
 class Badge extends React.Component<Props> {
   public static defaultProps = {

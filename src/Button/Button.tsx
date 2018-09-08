@@ -4,7 +4,26 @@ import classNames from "../utils/classNames";
 
 import styles from "./index.scss";
 
-type Size = "large" | "small";
+export type Type = "primary" | "secondary" | "success" | "warning" | "danger";
+
+export function typeToClass(size: Type | undefined): string {
+  switch (size) {
+    case "primary":
+      return styles.primary;
+    case "secondary":
+      return styles.secondary;
+    case "success":
+      return styles.success;
+    case "warning":
+      return styles.warning;
+    case "danger":
+      return styles.danger;
+    default:
+      return "";
+  }
+}
+
+export type Size = 'large' | 'small';
 
 function sizeToClass(size: string | undefined): string {
   switch (size) {
@@ -17,19 +36,23 @@ function sizeToClass(size: string | undefined): string {
   }
 }
 
+type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
+
 export type ButtonProps = {
   size?: Size;
-} & React.AllHTMLAttributes<HTMLButtonElement>;
+  type?: Type;
+} & Omit<React.AllHTMLAttributes<HTMLButtonElement>, 'size'>;
 
 class Button extends React.Component<ButtonProps> {
   public render() {
-    const { size, className, children, ...rest } = this.props;
+    const { size, type, className, children, ...rest } = this.props;
 
     const sizeClass = sizeToClass(size);
+    const typeClass = typeToClass(type);
 
     return (
       <button
-        className={classNames(styles.button, sizeClass, className)}
+        className={classNames(styles.button, sizeClass, typeClass, className)}
         {...rest}
       >
         {children}
