@@ -5162,7 +5162,7 @@ specifiers:
   react-ace: ^6.1.4
   react-dom: ^16.4.2
   react-is: ^16.4.2
-  react-paper-css: 'file:..'
+  react-paper-css: 'link:..'
   react-router: ^4.3.1
   react-router-dom: ^4.3.1
   react-source-render: ^1.1.3
