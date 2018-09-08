@@ -6,20 +6,21 @@ import "prismjs/components/prism-javascript";
 import "prismjs/components/prism-typescript";
 import React from "react";
 
-import { CODE_LINE_HEIGHT } from "../constants";
+import { CODE_FONT_SIZE, CODE_LINE_HEIGHT } from "../constants";
 
 import "./prism-tomorrow.scss";
 
 type Props = {
   code: string;
 };
-class PropsPresenter extends React.PureComponent<Props> {
+class HighlightedCode extends React.PureComponent<Props> {
   public render() {
     return (
       <pre
         style={{
           backgroundColor: "#1D1F21",
           lineHeight: CODE_LINE_HEIGHT,
+          padding: "0.8em",
         }}
       >
         <code
@@ -32,7 +33,7 @@ class PropsPresenter extends React.PureComponent<Props> {
           }}
           style={{
             fontFamily: "Inconsolata",
-            fontSize: 14,
+            fontSize: CODE_FONT_SIZE,
             lineHeight: CODE_LINE_HEIGHT,
           }}
         />
@@ -41,4 +42,4 @@ class PropsPresenter extends React.PureComponent<Props> {
   }
 }
 
-export default PropsPresenter;
+export default HighlightedCode;

@@ -1,9 +1,9 @@
 import React from "react";
 
-import PropsPresenter from "../../PropsPresenter";
+import HighlightedCode from "../../HighlightedCode";
 
 const PaperInputDoc = () => (
-  <PropsPresenter
+  <HighlightedCode
     code={`
 type Props = {
   block?: boolean;
