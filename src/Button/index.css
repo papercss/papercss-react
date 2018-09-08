@@ -1,4 +1,4 @@
-.paperButton {
+.button {
   align-self: center;
   background: 0 0;
   color: #41403e;
@@ -35,12 +35,12 @@
   padding: .5rem;
 }
 
-.paperButton[disabled] {
+.button[disabled] {
   cursor: not-allowed;
   opacity: .5;
 }
 
-.paperButton:hover {
+.button:hover {
   -webkit-box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, .3);
   -moz-box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, .3);
   box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, .3);

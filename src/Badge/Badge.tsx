@@ -28,7 +28,7 @@ export type Props = {
   type?: Type;
 } & React.AllHTMLAttributes<HTMLButtonElement>;
 
-class PaperButton extends React.Component<Props> {
+class Badge extends React.Component<Props> {
   public static defaultProps = {
     as: 'div',
   };
@@ -48,4 +48,4 @@ class PaperButton extends React.Component<Props> {
   }
 }
 
-export default PaperButton;
+export default Badge;
