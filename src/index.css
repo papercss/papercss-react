@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Neucha|Patrick+Hand+SC);
+@import url(https: //fonts.googleapis.com/css?family=Neucha|Patrick+Hand+SC);
+
 html {
   box-sizing: border-box
 }
@@ -10,7 +11,6 @@ html {
 }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
-
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -1138,17 +1138,6 @@ hr:after {
   position: relative;
   font-size: 1.5rem;
   top: -.75rem
-}
-
-.paper {
-  border: 1px solid #c1c0bd;
-  background-color: #fff;
-  padding: 2rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  -webkit-box-shadow: -1px 5px 35px -9px rgba(0, 0, 0, .2);
-  -moz-box-shadow: -1px 5px 35px -9px rgba(0, 0, 0, .2);
-  box-shadow: -1px 5px 35px -9px rgba(0, 0, 0, .2)
 }
 
 @media screen and (max-width:480px) {

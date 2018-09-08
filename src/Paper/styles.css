@@ -1,0 +1,10 @@
+.paper {
+  border: 1px solid #c1c0bd;
+  background-color: #fff;
+  padding: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  -webkit-box-shadow: -1px 5px 35px -9px rgba(0, 0, 0, .2);
+  -moz-box-shadow: -1px 5px 35px -9px rgba(0, 0, 0, .2);
+  box-shadow: -1px 5px 35px -9px rgba(0, 0, 0, .2)
+}

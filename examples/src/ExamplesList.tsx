@@ -6,8 +6,9 @@ import styled from "styled-components";
 import * as docs from "./docs";
 import Editors from "./Editors";
 const Section = styled.section`
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 120px 1fr 0;
+  column-gap: 20px;
 `;
 
 const About = () => <div>"About"</div>;

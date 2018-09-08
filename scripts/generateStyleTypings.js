@@ -1,14 +1,7 @@
 const DtsCreator = require("typed-css-modules");
 const glob = require("glob");
-const {
-  existsSync,
-  stat: fsStat,
-  writeFileSync,
-  unlinkSync
-} = require("fs");
-const {
-  promisify
-} = require("util");
+const { existsSync, stat: fsStat, writeFileSync, unlinkSync } = require("fs");
+const { promisify } = require("util");
 const chalk = require("chalk");
 const sass = require("node-sass");
 
@@ -20,9 +13,10 @@ const creator = new DtsCreator({
 
 const REMOVE_GENERATED_CSS = true;
 
-function createTypings(cssPath, stylesPath) {
+function createTypingsFromCSS(cssPath, stylesPath) {
+  console.log({ cssPath, stylesPath });
   console.log(
-    chalk `{cyan Generating declarations for {blue "${stylesPath}"}}.`
+    chalk`{cyan Generating declarations for {blue "${stylesPath}"}}.`
   );
   creator
     .create(cssPath)
@@ -33,7 +27,6 @@ function createTypings(cssPath, stylesPath) {
     .catch(console.error);
 }
 
-
 function transformFromSass(filePath) {
   const [_, extension] = filePath.match(/(\w+)$/);
 
@@ -43,12 +36,20 @@ function transformFromSass(filePath) {
       cssPath,
       sass.renderSync({
         file: filePath,
-        outputStyle: "expanded"
+        outputStyle: "expanded",
       }).css
     );
     return cssPath;
   }
   return filePath;
+}
+
+function createTypings(stylesPath) {
+  const cssPath = transformFromSass(stylesPath);
+  createTypingsFromCSS(cssPath, stylesPath);
+  if (REMOVE_GENERATED_CSS && cssPath !== stylesPath) {
+    unlinkSync(cssPath);
+  }
 }
 
 function generateTypingsFromCssFiles() {
@@ -64,11 +65,7 @@ function generateTypingsFromCssFiles() {
         Promise.all([stat(typingPath), stat(stylesPath)]).then(
           ([typingStats, styleStats]) => {
             if (typingStats.mtimeMs < styleStats.mtimeMs) {
-              const cssPath = transformFromSass(stylesPath);
-              createTypings(cssPath, stylesPath);
-              if (REMOVE_GENERATED_CSS && cssPath !== stylesPath) {
-                unlinkSync(cssPath);
-              }
+              createTypings(stylesPath);
             }
           }
         );

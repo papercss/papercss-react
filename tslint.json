@@ -21,6 +21,9 @@
       "check-format",
       "allow-pascal-case"
     ],
-    "jsx-boolean-value": false
+    "jsx-boolean-value": false,
+    "function-name": [
+      "allow-pascal-case"
+    ]
   }
 }
