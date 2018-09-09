@@ -81,7 +81,11 @@ class Editors extends React.Component<EditorsProps, State> {
 
     return (
       <article>
-        <PaperCss.Paper>
+        <PaperCss.Paper
+          style={{
+            overflow: "scroll",
+          }}
+        >
           <SourceRender
             onError={this.handleRenderError}
             onSuccess={this.handleRenderSuccess}

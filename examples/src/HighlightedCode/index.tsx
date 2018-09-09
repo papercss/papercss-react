@@ -20,6 +20,7 @@ class HighlightedCode extends React.PureComponent<Props> {
         style={{
           backgroundColor: "#1D1F21",
           lineHeight: CODE_LINE_HEIGHT,
+          overflow: "scroll",
           padding: "0.8em",
         }}
       >

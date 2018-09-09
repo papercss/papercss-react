@@ -10,7 +10,7 @@ const ButtonDoc = () => (
 type Props = {
   size?: 'small' | 'large';
   type?: 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
-} & React.AllHTMLAttributes<HTMLDivElement>;
+} & React.AllHTMLAttributes<HTMLButtonElement>;
 `}
     />
   </Typography>

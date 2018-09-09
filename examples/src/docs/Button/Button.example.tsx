@@ -2,20 +2,20 @@ import React from "react";
 import { Button, Typography } from "react-paper-css";
 
 const Example = (
-  <>
-    <Typography>
+  <Typography>
+    <section>
       <div>Different sizes</div>
       <ButtonBox columns={3}>
         <Button>Default</Button>
         <Button size="small">Small</Button>
         <Button size="large">Large</Button>
       </ButtonBox>
-    </Typography>
-    <Typography>
+    </section>
+    <section>
       <div>Disabled button</div>
       <Button disabled={true}>Disabled</Button>
-    </Typography>
-    <Typography>
+    </section>
+    <section>
       <div>Colors</div>
       <ButtonBox columns={5}>
         <Button type="primary">Primary</Button>
@@ -24,8 +24,8 @@ const Example = (
         <Button type="warning">Warning</Button>
         <Button type="danger">Danger</Button>
       </ButtonBox>
-    </Typography>
-  </>
+    </section>
+  </Typography>
 );
 
 function ButtonBox({ columns, children }) {

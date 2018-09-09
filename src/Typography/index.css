@@ -26,66 +26,6 @@ h6 {
   font-weight: 400;
 }
 
-/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- LISTS =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
-ul,
-ol {
-  font-family: 'Neucha', sans-serif;
-}
-
-ol {
-  list-style-type: decimal;
-}
-
-ol ol {
-  list-style-type: upper-alpha;
-}
-
-ol ol ol {
-  list-style-type: upper-roman;
-}
-
-ol ol ol ol {
-  list-style-type: lower-alpha;
-}
-
-ol ol ol ol ol {
-  list-style-type: lower-roman;
-}
-
-ul {
-  list-style: none;
-  margin-left: 0;
-}
-
-ul li {
-  text-indent: -7px;
-}
-
-ul li:before {
-  position: relative;
-  left: -7px;
-}
-
-ul li:before {
-  content: "-";
-}
-
-ul ul li:before {
-  content: "+";
-}
-
-ul ul ul li:before {
-  content: "~";
-}
-
-ul ul ul ul li:before {
-  content: "⤍";
-}
-
-ul ul ul ul ul li:before {
-  content: "⁎";
-}
-
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- CODE =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
 code {
   padding: 2px 4px;
