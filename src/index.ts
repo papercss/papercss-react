@@ -1,5 +1,5 @@
 export { default as Button } from "./Button";
-export { default as PaperTypography } from "./Typography";
+export { default as Typography } from "./Typography";
 export { default as PaperLayout } from "./Layout";
 export { default as PaperCol } from "./Layout/Column";
 export { default as PaperForms } from "./Forms";

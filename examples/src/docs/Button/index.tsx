@@ -1,15 +1,11 @@
 import React from "react";
-import { PaperTypography } from "react-paper-css";
+import { Typography } from "react-paper-css";
 
-import PropsPresenter from "../../PropsPresenter";
+import HighlightedCode from "../../HighlightedCode";
 
 const ButtonDoc = () => (
-  <PaperTypography>
-    <p>
-      You can customize button colors with primary, secondary, success, warning,
-      danger classes or set button size with large or small.
-    </p>
-    <PropsPresenter
+  <Typography>
+    <HighlightedCode
       code={`
 type Props = {
   size?: 'small' | 'large';
@@ -17,7 +13,7 @@ type Props = {
 } & React.AllHTMLAttributes<HTMLDivElement>;
 `}
     />
-  </PaperTypography>
+  </Typography>
 );
 
 export default ButtonDoc;

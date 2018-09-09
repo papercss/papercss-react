@@ -13,8 +13,8 @@ export const PaperInput = fs.readFileSync(
   "utf-8"
 );
 
-export const PaperTypography = fs.readFileSync(
-  `${__dirname}/PaperTypography/PaperTypography.example.tsx`,
+export const Typography = fs.readFileSync(
+  `${__dirname}/Typography/Typography.example.tsx`,
   "utf-8"
 );
 

@@ -8,7 +8,7 @@ import styles from "./styles.scss";
 type Props = {
   as: keyof React.ReactHTML;
 } & HTMLAttributes<HTMLDivElement>;
-class PaperTypography extends React.Component<Props> {
+class Typography extends React.Component<Props> {
   public static defaultProps: Pick<Props, "as"> = {
     as: "div",
   };
@@ -26,4 +26,4 @@ class PaperTypography extends React.Component<Props> {
   }
 }
 
-export default PaperTypography;
+export default Typography;

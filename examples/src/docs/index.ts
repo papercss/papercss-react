@@ -1,15 +1,17 @@
 import Badge from "./Badge";
+import Button from "./Button";
 import * as examplesBarrel from "./examples";
 import PaperInput from "./PaperInput";
-import PaperTypography from "./PaperTypography";
+import Typography from "./Typography";
 
 const examples = { ...examplesBarrel };
 delete examples.__esModule;
 
 const documentationComponents: Record<string, () => JSX.Element> = {
+  Button,
   Badge,
   PaperInput,
-  PaperTypography,
+  Typography,
 };
 
 export { examples, documentationComponents };

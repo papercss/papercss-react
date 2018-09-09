@@ -1,5 +1,5 @@
 import React from "react";
-import { borderStyles, Paper, PaperTypography } from "react-paper-css";
+import { borderStyles, Paper, Typography } from "react-paper-css";
 import { Link, Route } from "react-router-dom";
 import styled from "styled-components";
 
@@ -8,9 +8,10 @@ import Example from "./Example";
 import { H3, H4 } from "./Headings";
 const Section = styled.section`
   height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 3fr 0;
-  column-gap: 0;
+  @media (min-width: 420px) {
+    display: grid;
+    grid-template-columns: 1fr 3fr 0;
+  }
 `;
 
 const About = () => (
@@ -48,7 +49,7 @@ const routes = examples.map(([name], index) => (
 console.table(borderStyles);
 
 const Nav = styled((props: React.AllHTMLAttributes<HTMLDivElement>) => (
-  <PaperTypography {...props} as="nav" />
+  <Typography {...props} as="nav" />
 ))`
   min-width: 120px;
 `;
@@ -67,6 +68,7 @@ export default class ExamplesList extends React.Component {
           style={{
             height: "100%",
             maxWidth: "1000px",
+            minWidth: "370px",
           }}
         >
           <Route exact path="/" component={About} />

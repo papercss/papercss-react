@@ -1,10 +1,10 @@
 import React from "react";
-import { PaperTypography } from "react-paper-css";
+import { Typography } from "react-paper-css";
 
 import HighlightedCode from "../../HighlightedCode";
 
 const BadgeDoc = () => (
-  <PaperTypography>
+  <Typography>
     <p>
       You can customize badges colors with primary, secondary, success, warning,
       danger classes.
@@ -17,7 +17,7 @@ type Props = {
 } & React.AllHTMLAttributes<HTMLDivElement>;
 `}
     />
-  </PaperTypography>
+  </Typography>
 );
 
 export default BadgeDoc;

@@ -1,21 +1,21 @@
 import React from "react";
-import { Button, PaperTypography } from "react-paper-css";
+import { Button, Typography } from "react-paper-css";
 
 const Example = (
   <>
-    <PaperTypography>
+    <Typography>
       <div>Different sizes</div>
       <ButtonBox columns={3}>
         <Button>Default</Button>
         <Button size="small">Small</Button>
         <Button size="large">Large</Button>
       </ButtonBox>
-    </PaperTypography>
-    <PaperTypography>
+    </Typography>
+    <Typography>
       <div>Disabled button</div>
       <Button disabled={true}>Disabled</Button>
-    </PaperTypography>
-    <PaperTypography>
+    </Typography>
+    <Typography>
       <div>Colors</div>
       <ButtonBox columns={5}>
         <Button type="primary">Primary</Button>
@@ -24,7 +24,7 @@ const Example = (
         <Button type="warning">Warning</Button>
         <Button type="danger">Danger</Button>
       </ButtonBox>
-    </PaperTypography>
+    </Typography>
   </>
 );
 
