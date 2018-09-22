@@ -12,7 +12,7 @@
     "experimentalDecorators": true,
     "esModuleInterop": true,
     "outDir": "build/module",
-    "typeRoots": ["node_modules/@types", "src/declarations"],
+    "typeRoots": ["node_modules/@types", "src/declarations"]
   },
   "include": ["src"]
 }
