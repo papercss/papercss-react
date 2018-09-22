@@ -1,8 +1,8 @@
-import React, { ReactNode } from 'react';
+import React from "react";
 
-import classNames from '../utils/classNames';
+import classNames from "../utils/classNames";
 
-import styles from './index.css';
+import styles from "./index.css";
 
 export type Type = "primary" | "secondary" | "success" | "warning" | "danger";
 
@@ -30,7 +30,7 @@ export type Props = {
 
 class Badge extends React.Component<Props> {
   public static defaultProps = {
-    as: 'div',
+    as: "div",
   };
   public render() {
     const { type, as, className, children, ...rest } = this.props;

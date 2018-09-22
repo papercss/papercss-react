@@ -4,7 +4,7 @@ import classNames from "../utils/classNames";
 
 import styles from "./styles.css";
 
-export type PaperFormProps = React.AllHTMLAttributes<HTMLFormElement>;
+export type PaperFormProps = React.FormHTMLAttributes<HTMLFormElement>;
 
 class PaperForms extends React.Component<PaperFormProps> {
   public render() {
