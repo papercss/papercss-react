@@ -19,6 +19,8 @@ declare module "prismjs/themes/prism-tomorrow.css";
 
 declare var __dirname: string;
 
-declare module 'fs' {
+declare module "fs" {
   export function readFileSync(path: string, options: any);
 }
+
+declare module "react-docgen";

@@ -11,6 +11,7 @@ import prettier from "prettier/standalone";
 import { H4 } from "../Headings";
 
 import Editor from "./Editor";
+import ErrorContainer from "./ErrorContainer";
 
 const prettierPlugins = [babylon];
 
@@ -59,7 +60,7 @@ class Editors extends React.Component<EditorsProps, State> {
         <PaperCss.Paper
           style={{
             marginTop: 0,
-            overflow: "scroll",
+            overflow: "auto",
           }}
         >
           <SourceRender
@@ -100,11 +101,7 @@ class Editors extends React.Component<EditorsProps, State> {
             />
           </>
         )}
-        {error && (
-          <div>
-            <pre>{error.toString()}</pre>
-          </div>
-        )}
+        <ErrorContainer error={error} />
       </article>
     );
   }

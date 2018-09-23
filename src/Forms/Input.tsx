@@ -7,18 +7,24 @@ import styles from "./styles.css";
 type Props = {
   block?: boolean;
   label?: React.ReactNode;
-  inputSize?: string;
-  inputID?: string;
+  inputId?: string;
   placeholder?: string;
   disabled?: boolean;
 } & React.AllHTMLAttributes<HTMLDivElement>;
 
+const uniqueIdCounter = 0;
+function makeUniqueId() {
+  return `paper-input-#${uniqueIdCounter}`;
+}
+
 class Input extends React.Component<Props> {
+  public uniqueId = makeUniqueId();
+
   public render() {
     const {
       block,
       label,
-      inputID,
+      inputId,
       placeholder,
       disabled,
       className: propsClassName,
@@ -26,18 +32,19 @@ class Input extends React.Component<Props> {
     } = this.props;
 
     const blockClass = block && styles.inputBlock;
+    const id = inputId === undefined && label ? this.uniqueId : inputId;
 
     return (
       <div className={classNames(styles.formGroup, propsClassName)} {...rest}>
         {label && (
-          <label htmlFor={inputID} className={classNames(blockClass)}>
+          <label htmlFor={id} className={classNames(blockClass)}>
             {label}
           </label>
         )}
         <input
           className={classNames(styles.paperInput, blockClass)}
           placeholder={placeholder}
-          id={inputID}
+          id={id}
           disabled={disabled}
         />
       </div>
