@@ -1,6 +1,8 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
+    "moduleResolution": "node",
+    "lib": ["es2017", "dom"],
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "jsx": "react"

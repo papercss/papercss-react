@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, Typography } from "react-paper-css";
+import { Typography } from "react-paper-css";
 import styled, { css } from "styled-components";
 
 import Editors from "./Editors";
@@ -60,10 +60,9 @@ const UnderlinedButton = styled.button`
     return "";
   }};
 `;
-type ExampleProps = {
-  name: string;
+
+export type SandboxProps = {
   source: string;
-  children: React.ReactNode;
 };
 
 const initialState = {
@@ -73,24 +72,15 @@ const initialState = {
 
 type State = typeof initialState;
 
-class Example extends React.PureComponent<ExampleProps, State> {
+class Sandbox extends React.PureComponent<SandboxProps, State> {
   public readonly state = initialState;
 
   public render() {
-    const { name, source, children } = this.props;
+    const { source } = this.props;
     const { markupVisible, sourceVisible } = this.state;
     return (
       <section>
         <header style={{ display: "flex", flexDirection: "row" }}>
-          <Heading
-            as="h3"
-            style={{
-              flex: 1,
-              margin: 0,
-            }}
-          >
-            {name}
-          </Heading>
           <Typography as="section">
             <UnderlinedButton
               active={sourceVisible}
@@ -106,7 +96,6 @@ class Example extends React.PureComponent<ExampleProps, State> {
             </UnderlinedButton>
           </Typography>
         </header>
-        {children}
         <Editors
           initialSource={source}
           showMarkup={markupVisible}
@@ -125,4 +114,4 @@ class Example extends React.PureComponent<ExampleProps, State> {
   };
 }
 
-export default Example;
+export default Sandbox;

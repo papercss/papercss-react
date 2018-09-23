@@ -16,3 +16,9 @@ declare module "prismjs/components/prism-clike";
 declare module "prismjs/components/prism-javascript";
 declare module "prismjs/components/prism-typescript";
 declare module "prismjs/themes/prism-tomorrow.css";
+
+declare var __dirname: string;
+
+declare module 'fs' {
+  export function readFileSync(path: string, options: any);
+}

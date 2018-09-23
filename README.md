@@ -50,7 +50,7 @@ Then click or copy the link in your terminal to go to examples page.
 ## Possible problems
 
 If you clone the repo, try to run examples and face an error similar to `/papercss-react/examples/src/ExamplesList.tsx:42:32: Cannot resolve dependency 'react-paper-css'`
-install the library agai.
+install the library again.
 
 ```
 npm install ..

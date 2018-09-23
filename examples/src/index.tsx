@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 
-import ExamplesList from "./ExamplesList";
+import Pages from "./Pages";
 
 const App = () => (
   <main
@@ -12,7 +12,7 @@ const App = () => (
     }}
   >
     <Router>
-      <ExamplesList />
+      <Pages />
     </Router>
   </main>
 );

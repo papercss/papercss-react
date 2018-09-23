@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, HeadingProps, HeadingType, Omit } from "react-paper-css";
+import { Heading, HeadingProps, Omit } from "react-paper-css";
 import styled from "styled-components";
 export const H4 = styled((props: Omit<HeadingProps, "as">) => (
   <Heading {...props} as="h4" />

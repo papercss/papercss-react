@@ -3,9 +3,13 @@ import { borderStyles, Typography } from "react-paper-css";
 import { Link, Route } from "react-router-dom";
 import styled from "styled-components";
 
-import * as docs from "./docs";
-import Example from "./Example";
+import About from "./About";
 import { H3, H4 } from "./Headings";
+
+import * as _docs from "./docs";
+
+const docs: Record<string, React.ComponentType> = { ..._docs };
+delete docs.__esModule;
 
 const Section = styled.section`
   height: 100%;
@@ -29,39 +33,17 @@ const Section = styled.section`
   }
 `;
 
-const About = () => (
-  <section>
-    <ul>
-      <li>Ready for the component age!</li>
-      <li>No global styles</li>
-      <li>Easy to enhance and compose</li>
-      <li>Pretty pretty</li>
-    </ul>
-  </section>
-);
+const docsEntries = Object.entries(docs);
 
-const examples = Object.entries(docs.examples);
-
-const links = examples.map(([name]) => (
+const links = docsEntries.map(([name]) => (
   <div key={name}>
     <Link to={`/${name}`}>{name}</Link>
   </div>
 ));
 
-const pages = examples.map(([name, source]) => {
-  const Info = docs.documentationComponents[name];
-  return () => (
-    <Example name={name} source={source}>
-      {Info && <Info />}
-    </Example>
-  );
-});
-
-const routes = examples.map(([name], index) => (
-  <Route path={`/${name}`} component={pages[index]} key={name} />
+const routes = docsEntries.map(([name]) => (
+  <Route path={`/${name}`} component={docs[name]} key={name} />
 ));
-
-console.table(borderStyles);
 
 const Nav = styled((props: React.AllHTMLAttributes<HTMLDivElement>) => (
   <Typography {...props} as="nav" />
@@ -76,7 +58,7 @@ const Nav = styled((props: React.AllHTMLAttributes<HTMLDivElement>) => (
   transition: all 0.5s ease;
 `; // TODO: use classname .shadow
 
-export default class ExamplesList extends React.Component {
+export default class Pages extends React.Component {
   public render() {
     return (
       <Section>
