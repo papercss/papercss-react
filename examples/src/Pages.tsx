@@ -1,12 +1,12 @@
+import { PropsTable } from "docz";
 import React from "react";
 import { borderStyles, Typography } from "react-paper-css";
 import { Link, Route } from "react-router-dom";
 import styled from "styled-components";
 
 import About from "./About";
-import { H3, H4 } from "./Headings";
-
 import * as _docs from "./docs";
+import { H3, H4 } from "./Headings";
 
 const docs: Record<string, React.ComponentType> = { ..._docs };
 delete docs.__esModule;
@@ -33,16 +33,12 @@ const Section = styled.section`
   }
 `;
 
-const docsEntries = Object.entries(docs);
+const docsKeys = Object.keys(docs);
 
-const links = docsEntries.map(([name]) => (
+const links = docsKeys.map(name => (
   <div key={name}>
     <Link to={`/${name}`}>{name}</Link>
   </div>
-));
-
-const routes = docsEntries.map(([name]) => (
-  <Route path={`/${name}`} component={docs[name]} key={name} />
 ));
 
 const Nav = styled((props: React.AllHTMLAttributes<HTMLDivElement>) => (
@@ -71,12 +67,15 @@ export default class Pages extends React.Component {
         <article
           style={{
             height: "100%",
+            margin: "0 8px 0 8px",
             maxWidth: "1000px",
             minWidth: "370px",
           }}
         >
           <Route exact path="/" component={About} />
-          {routes}
+          {docsKeys.map(name => (
+            <Route path={`/${name}`} component={docs[name]} key={name} />
+          ))}
         </article>
       </Section>
     );

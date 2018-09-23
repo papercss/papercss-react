@@ -13,7 +13,7 @@ type Props = {
   disabled?: boolean;
 } & React.AllHTMLAttributes<HTMLDivElement>;
 
-class PaperInput extends React.Component<Props> {
+class Input extends React.Component<Props> {
   public render() {
     const {
       block,
@@ -45,4 +45,4 @@ class PaperInput extends React.Component<Props> {
   }
 }
 
-export default PaperInput;
+export default Input;

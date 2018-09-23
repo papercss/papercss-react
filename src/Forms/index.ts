@@ -1,5 +1,5 @@
-export { default } from "./PaperForms";
-export { default as PaperInput } from "./PaperInput";
-export { default as PaperCheckbox } from "./PaperCheckbox";
-export { default as PaperRadio } from "./PaperRadio";
-export { default as PaperSelect } from "./PaperSelect";
+export { default } from "./Forms";
+export { default as Input } from "./Input";
+export { default as PaperCheckbox } from "./Checkbox";
+export { default as PaperRadio } from "./Radio";
+export { default as PaperSelect } from "./Select";

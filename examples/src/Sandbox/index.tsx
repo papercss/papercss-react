@@ -80,22 +80,20 @@ class Sandbox extends React.PureComponent<SandboxProps, State> {
     const { markupVisible, sourceVisible } = this.state;
     return (
       <section>
-        <header style={{ display: "flex", flexDirection: "row" }}>
-          <Typography as="section">
-            <UnderlinedButton
-              active={sourceVisible}
-              onClick={this.toggleShowSource}
-            >
-              Playground
-            </UnderlinedButton>
-            <UnderlinedButton
-              active={markupVisible}
-              onClick={this.toggleShowMarkup}
-            >
-              Show HTML
-            </UnderlinedButton>
-          </Typography>
-        </header>
+        <Typography as="section">
+          <UnderlinedButton
+            active={sourceVisible}
+            onClick={this.toggleShowSource}
+          >
+            Playground
+          </UnderlinedButton>
+          <UnderlinedButton
+            active={markupVisible}
+            onClick={this.toggleShowMarkup}
+          >
+            Show HTML
+          </UnderlinedButton>
+        </Typography>
         <Editors
           initialSource={source}
           showMarkup={markupVisible}

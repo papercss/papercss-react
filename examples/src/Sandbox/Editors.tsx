@@ -58,6 +58,7 @@ class Editors extends React.Component<EditorsProps, State> {
       <article>
         <PaperCss.Paper
           style={{
+            marginTop: 0,
             overflow: "scroll",
           }}
         >
