@@ -1,20 +1,18 @@
-import { PropsTable } from "docz";
 import { readFileSync } from "fs";
 import React from "react";
-// import * as docgen from "react-docgen-typescript";
-import { Paper } from "react-paper-css";
 
+import { H3 } from "../../Headings";
 import Sandbox from "../../Sandbox";
 
 const source = readFileSync(`${__dirname}/Example.tsx`, "utf-8");
 
-// const info = docgen.parse("../../Sandbox/index.tsx");
-
-// (Paper as any).__docgenInfo = info;
+(window as any).system = (window as any).system || {
+  newLine: "\n",
+};
 
 export default () => (
   <>
-    <PropsTable of={Paper} />
+    <H3>Paper</H3>
     <Sandbox source={source} />
   </>
 );

@@ -8,6 +8,7 @@ const Example = (
       <Input />
       <span>Block Level 100% width input.</span>
       <Input block />
+      <Input label="Label" />
     </section>
   </>
 );

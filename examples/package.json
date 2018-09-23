@@ -36,7 +36,6 @@
     "prismjs": "^1.15.0",
     "react": "^16.4.2",
     "react-ace": "^6.1.4",
-    "react-docgen-typescript": "^1.9.1",
     "react-dom": "^16.4.2",
     "react-is": "^16.4.2",
     "react-paper-css": "../",
