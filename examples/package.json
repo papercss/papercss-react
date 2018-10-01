@@ -6,7 +6,7 @@
   "main": "./src/index.ts",
   "scripts": {
     "dev": "parcel ./src/index.html",
-    "build": "parcel build ./src/index.html"
+    "build": "parcel build ./src/index.html --public-url ."
   },
   "dependencies": {
     "@babel/core": "^7.0.0",
@@ -38,7 +38,8 @@
     "react-ace": "^6.1.4",
     "react-dom": "^16.4.2",
     "react-is": "^16.4.2",
-    "react-paper-css": "../",
+    "react-paper-css": "file:../",
+    "react-rough-logo": "file:../../react-rough-logo",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-source-render": "^1.1.3",

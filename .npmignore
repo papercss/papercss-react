@@ -1,0 +1,14 @@
+# gitignore
+**/node_modules/
+.DS_Store
+
+yarn.lock
+package-lock.json
+yarn-error.log
+examples/.cache
+examples/dist
+build
+**/.vscode
+
+# others
+examples

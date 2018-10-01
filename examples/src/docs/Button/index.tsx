@@ -10,7 +10,7 @@ const source = readFileSync(`${__dirname}/Example.tsx`, "utf-8");
 
 const ButtonDoc = () => (
   <Typography>
-    <H3>Badge</H3>
+    <H3>Button</H3>
     <HighlightedCode
       code={`
 type Props = {
