@@ -61,19 +61,23 @@ const UnderlinedButton = styled.button`
   }};
 `;
 
-export type SandboxProps = {
-  source: string;
-};
-
-const initialState = {
+const defaultInitialState = {
   markupVisible: false,
   sourceVisible: true,
 };
 
-type State = typeof initialState;
+type State = typeof defaultInitialState;
+
+export type SandboxProps = {
+  source: string;
+  initialState?: Partial<State>
+};
 
 class Sandbox extends React.PureComponent<SandboxProps, State> {
-  public readonly state = initialState;
+  public readonly state = {
+    ...defaultInitialState,
+    ...this.props.initialState,
+  };
 
   public render() {
     const { source } = this.props;

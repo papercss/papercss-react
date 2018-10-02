@@ -1,12 +1,14 @@
-import { PropsTable } from "docz";
 import React from "react";
 import { borderStyles, Typography } from "react-paper-css";
+// tslint:disable-next-line:no-submodule-imports
+import "react-rough-logo/build/index.css";
 import { Link, Route } from "react-router-dom";
 import styled from "styled-components";
 
 import About from "./About";
 import * as _docs from "./docs";
 import { H3, H4 } from "./Headings";
+import SmallLogo from "./SmallLogo";
 
 const docs: Record<string, React.ComponentType> = { ..._docs };
 delete docs.__esModule;
@@ -59,7 +61,15 @@ export default class Pages extends React.Component {
     return (
       <Section>
         <Nav>
-          <H3>PaperCSS React</H3>
+          <H3
+            style={{
+              alignItems: "center",
+              display: "flex",
+            }}
+          >
+            <SmallLogo />
+            PaperCSS React
+          </H3>
           <Link to="/">About</Link>
           <H4>Components</H4>
           {links}

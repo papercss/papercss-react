@@ -7,11 +7,10 @@ import styles from "./styles.scss";
 
 type ListElement = HTMLUListElement | HTMLOListElement;
 
-export type ListProps<T extends ListElement = HTMLUListElement> = {
-  as: "ol" | "ul";
-} & {
-  ordered: true;
-} & HTMLAttributes<T>;
+export type ListProps<T extends ListElement = HTMLUListElement> = (
+  | { as?: "ul"; ordered?: false }
+  | { as?: "ol"; ordered?: true }) &
+  HTMLAttributes<T>;
 
 function List<T extends ListElement = HTMLUListElement>({
   as: asProp,

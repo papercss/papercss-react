@@ -5,6 +5,9 @@ export { default as PaperCol } from "./Layout/Column";
 export { default as PaperForms } from "./Forms";
 export { default as Paper } from "./Paper";
 export { default as Badge } from "./Badge";
+export { default as Card } from "./Card";
+export { default as List } from "./List";
+
 export * from "./Forms";
 export * from "./Typography";
 
