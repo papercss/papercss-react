@@ -36,6 +36,7 @@ type ListProps<T extends ListElement = HTMLUListElement> = (
     <Sandbox source={orderedListSource} sourceVisible={false} />
     <H3>Unorderd Lists</H3>
     <Sandbox source={unorderedListSource} sourceVisible={false} />
+    <H3>Mixed Lists</H3>
     <p>Of course you can mix ordered and unordered lists.</p>
     <Sandbox source={mixedListSource} sourceVisible={false} />
   </Typography>
