@@ -39,7 +39,7 @@
     "react-dom": "^16.4.2",
     "react-is": "^16.4.2",
     "react-paper-css": "1.0.0-alpha.0",
-    "react-rough-logo": "file:../../react-rough-logo",
+    "react-rough-logo": "^0.1.0-2",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-source-render": "^1.1.3",
