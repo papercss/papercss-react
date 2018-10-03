@@ -1,10 +1,12 @@
 **/node_modules/
+**/.vscode
 .DS_Store
+
+examples/.cache
+examples/dist
+
+library/build
 
 yarn.lock
 package-lock.json
 yarn-error.log
-examples/.cache
-examples/dist
-build
-**/.vscode

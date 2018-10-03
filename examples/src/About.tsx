@@ -1,11 +1,15 @@
 import React from "react";
-import { Typography } from "react-paper-css";
+import * as Paper from "react-paper-css";
 import RoughReactLogo from "react-rough-logo";
 
 const roughOptions = {
   stroke: "#41403e",
   strokeWidth: 4,
 };
+
+console.log({ Paper });
+
+const Typography = "div";
 
 const About = () => (
   <Typography as="section">
@@ -61,9 +65,9 @@ const About = () => (
       </blockquote>
       <p>
         This may not be the best thing when you want to build an app quickly. If
-        you want to use Comic Sans in place of default font with a CSS
-        framework you can either fork it or override each selector that sets the
-        font, what is not fun.
+        you want to use Comic Sans in place of default font with a CSS framework
+        you can either fork it or override each selector that sets the font,
+        what is not fun.
       </p>
       <p>
         In PaperCSS React, you get only what you ask for. Need only a button?
