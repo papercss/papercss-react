@@ -8,14 +8,14 @@
     margin-left: 0;
 
     li {
-      color: blueviolet;  
       text-indent: -7px;
-    }
+      list-style: none;
 
-    li:before {
-      position: relative;
-      left: -7px;
-      content: "-";
+      &:before {
+        position: relative;
+        left: -7px;
+        content: "-";
+      }
     }
   }
 
@@ -33,6 +33,21 @@
 
   ol ol ol ol {
     list-style-type: lower-roman;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  ul li {
+    text-indent: -7px;
+    list-style: none;
+
+    &:before {
+      position: relative;
+      left: -7px;
+      content: "-";
+    }
   }
 
   ul li:before {
