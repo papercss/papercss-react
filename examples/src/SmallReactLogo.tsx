@@ -7,7 +7,7 @@ const roughOptions = {
   strokeWidth: 2,
 };
 
-const SmallReactLogo = styled(({ className }: { className: string }) => (
+const SmallReactLogo = styled(({ className }: { className?: string }) => (
   <RoughReactLogo
     className={className}
     circleOptions={roughOptions}
