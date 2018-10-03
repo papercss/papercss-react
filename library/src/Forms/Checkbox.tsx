@@ -4,7 +4,7 @@ import { OptionChild, optionsFromChildren } from "./OptionChild";
 
 import styles from "./styles.css";
 
-export type Props = {
+export type PaperCheckboxProps = {
   checked: string;
   children: OptionChild | OptionChild[];
   callback?: (event: React.ChangeEvent<HTMLInputElement>) => any;
@@ -14,13 +14,13 @@ type State = Readonly<{
   selectedChecks: Record<string, boolean>;
 }>;
 
-function makeInitialState({ checked }: Props): State {
+function makeInitialState({ checked }: PaperCheckboxProps): State {
   return {
     selectedChecks: checked ? { [checked]: true } : {},
   };
 }
 
-class PaperCheckbox extends React.Component<Props, State> {
+class PaperCheckbox extends React.Component<PaperCheckboxProps, State> {
   public readonly state: State = makeInitialState(this.props);
 
   public render() {

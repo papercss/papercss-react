@@ -30,7 +30,7 @@ Card.Body = <T extends HTMLElement = HTMLElement>({
   );
 };
 
-type TitleProps = {
+export type TitleProps = {
   as?: HeadingType;
 } & HTMLAttributes<HTMLHeadingElement>;
 
@@ -49,12 +49,12 @@ Card.Subtitle = ({
   />
 );
 
-type TextProps = {
+export type TextProps = {
   as?: keyof React.ReactHTML;
 } & HTMLAttributes<HTMLElement>;
 
 Card.Text = ({ as: ElementType = "p", className, ...rest }: TextProps) => (
-  <ElementType className={classNames(styles.cardText)} {...rest} /> 
+  <ElementType className={classNames(styles.cardText)} {...rest} />
 );
 
 export default Card;

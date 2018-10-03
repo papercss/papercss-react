@@ -1,12 +1,11 @@
-export { default as Button } from "./Button";
-export { default as Typography } from "./Typography";
-export { default as PaperLayout } from "./Layout";
-export { default as PaperCol } from "./Layout/Column";
-export { default as PaperForms } from "./Forms";
-export { default as Paper } from "./Paper";
-export { default as Badge } from "./Badge";
-export { default as Card } from "./Card";
-export { default as List } from "./List";
+export * from "./Button";
+export * from "./Typography";
+export * from "./Layout";
+export * from "./Forms";
+export * from "./Paper";
+export * from "./Badge";
+export * from "./Card";
+export * from "./List";
 
 export * from "./Forms";
 export * from "./Typography";

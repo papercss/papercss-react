@@ -1,9 +1,9 @@
 import React from "react";
-import { borderStyles, Typography } from "react-paper-css";
+import styled from "react-emotion";
+import { borderStyles, List, ListProps, Typography } from "react-paper-css";
 // tslint:disable-next-line:no-submodule-imports
 import "react-rough-logo/build/index.css";
-import { Link, Route } from "react-router-dom";
-import styled from "styled-components";
+import { NavLink, NavLinkProps, Route } from "react-router-dom";
 
 import About from "./About";
 import * as _docs from "./docs";
@@ -37,10 +37,26 @@ const Section = styled.section`
 
 const docsKeys = Object.keys(docs);
 
+const LinksSection = (props: ListProps) => (
+  <List
+    style={{
+      margin: 0,
+      paddingLeft: "18px",
+    }}
+    {...props}
+  />
+);
+
+const MenuLink = (props: NavLinkProps) => (
+  <li>
+    <NavLink {...props} />
+  </li>
+);
+
 const links = docsKeys.map(name => (
-  <div key={name}>
-    <Link to={`/${name}`}>{name}</Link>
-  </div>
+  <MenuLink key={name} to={`/${name}`}>
+    {name}
+  </MenuLink>
 ));
 
 const Nav = styled((props: React.AllHTMLAttributes<HTMLDivElement>) => (
@@ -70,9 +86,11 @@ export default class Pages extends React.Component {
             <SmallReactLogo />
             PaperCSS React
           </H3>
-          <Link to="/">About</Link>
+          <LinksSection>
+            <MenuLink to="/">About</MenuLink>
+          </LinksSection>
           <H4>Components</H4>
-          {links}
+          <LinksSection>{links}</LinksSection>
         </Nav>
         <article
           style={{

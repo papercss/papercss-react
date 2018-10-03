@@ -1,1 +1,4 @@
-export { default } from './PaperLayout';
+export { default as Layout } from "./Layout";
+export * from "./Layout";
+
+export * from "./Column";
