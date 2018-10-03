@@ -6,10 +6,18 @@ import { H3 } from "../../Headings";
 import HighlightedCode from "../../HighlightedCode";
 import Sandbox from "../../Sandbox";
 
-const orderedListSource = readFileSync(`${__dirname}/OrderedListExample.tsx`, "utf-8");
-const unorderedListSource = readFileSync(`${__dirname}/UnorderedListExample.tsx`, "utf-8");
-const mixedListSource = readFileSync(`${__dirname}/MixedListExample.tsx`, "utf-8");
-
+const orderedListSource = readFileSync(
+  `${__dirname}/OrderedListExample.tsx`,
+  "utf-8"
+);
+const unorderedListSource = readFileSync(
+  `${__dirname}/UnorderedListExample.tsx`,
+  "utf-8"
+);
+const mixedListSource = readFileSync(
+  `${__dirname}/MixedListExample.tsx`,
+  "utf-8"
+);
 
 const BadgeDoc = () => (
   <Typography>
@@ -18,11 +26,10 @@ const BadgeDoc = () => (
       code={`
 type ListElement = HTMLUListElement | HTMLOListElement;
 
-export type ListProps<T extends ListElement = HTMLUListElement> = {
-  as: "ol" | "ul";
-} & {
-  ordered: true;
-} & HTMLAttributes<T>;
+type ListProps<T extends ListElement = HTMLUListElement> = (
+  | { as?: "ul"; ordered?: false }
+  | { as?: "ol"; ordered?: true }) &
+  HTMLAttributes<T>;      
 `}
     />
     <H3>Ordered Lists</H3>

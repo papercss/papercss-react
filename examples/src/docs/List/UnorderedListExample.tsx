@@ -2,20 +2,20 @@ import React from "react";
 import { List, Typography } from "react-paper-css";
 
 const UnorderedListExample = (
-  <List ordered>
+  <List>
     <li>1st level</li>
-    <ol>
+    <ul>
       <li>2nd level</li>
-      <ol>
+      <ul>
         <li>3rd level</li>
-        <ol>
+        <ul>
           <li>4th level</li>
-          <ol>
+          <ul>
             <li>5th level</li>
-          </ol>
-        </ol>
-      </ol>
-    </ol>
+          </ul>
+        </ul>
+      </ul>
+    </ul>
   </List>
 );
 

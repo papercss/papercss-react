@@ -55,7 +55,7 @@ module.exports = {
           options: {
             compilerOptions: {
               declaration: true,
-              declarationDir: "types",
+              declarationDir: "build/types",
             },
           },
         },

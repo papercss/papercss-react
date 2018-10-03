@@ -9,4 +9,3 @@ export const cardTitle: string;
 export const cardSubtitle: string;
 export const cardText: string;
 export const cardLink: string;
-export const cardImage: string;

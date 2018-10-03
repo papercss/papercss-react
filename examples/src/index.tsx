@@ -7,7 +7,8 @@ import Pages from "./Pages";
 const App = () => (
   <main
     style={{
-      backgroundImage: "url(https://www.getpapercss.com/img/geometry2.png)",
+      backgroundImage:
+        "url(https://www.getpapercss.com/img/geometry2.png) repeat",
       height: "100%",
     }}
   >
