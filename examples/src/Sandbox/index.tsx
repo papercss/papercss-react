@@ -13,14 +13,25 @@ type State = typeof defaultInitialState;
 
 export type SandboxProps = {
   source: string;
-  initialState?: Partial<State>;
-};
+} & Partial<State>;
+
+function getInitialState(props: SandboxProps): State {
+  return {
+    markupVisible: Boolean(
+      props.markupVisible === undefined
+        ? defaultInitialState.markupVisible
+        : props.markupVisible
+    ),
+    sourceVisible: Boolean(
+      props.sourceVisible === undefined
+        ? defaultInitialState.sourceVisible
+        : props.sourceVisible
+    ),
+  };
+}
 
 class Sandbox extends React.PureComponent<SandboxProps, State> {
-  public readonly state = {
-    ...defaultInitialState,
-    ...this.props.initialState,
-  };
+  public readonly state = getInitialState(this.props);
 
   public render() {
     const { source } = this.props;

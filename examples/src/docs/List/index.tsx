@@ -33,11 +33,11 @@ type ListProps<T extends ListElement = HTMLUListElement> = (
 `}
     />
     <H3>Ordered Lists</H3>
-    <Sandbox source={orderedListSource} />
+    <Sandbox source={orderedListSource} sourceVisible={false} />
     <H3>Unorderd Lists</H3>
-    <Sandbox source={unorderedListSource} />
+    <Sandbox source={unorderedListSource} sourceVisible={false} />
     <p>Of course you can mix ordered and unordered lists.</p>
-    <Sandbox source={mixedListSource} />
+    <Sandbox source={mixedListSource} sourceVisible={false} />
   </Typography>
 );
 

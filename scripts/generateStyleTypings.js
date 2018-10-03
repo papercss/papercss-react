@@ -14,7 +14,6 @@ const creator = new DtsCreator({
 const REMOVE_GENERATED_CSS = true;
 
 function createTypingsFromCSS(cssPath, stylesPath) {
-  console.log({ cssPath, stylesPath });
   console.log(
     chalk`{cyan Generating declarations for {blue "${stylesPath}"}}.`
   );

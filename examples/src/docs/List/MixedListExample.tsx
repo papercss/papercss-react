@@ -17,12 +17,12 @@ const MixedListExample = (
       </ol>
       <ul>
         <li>3rd level</li>
-        <ol>
+        <ul>
           <li>4th level</li>
-          <ol>
+          <ul>
             <li>5th level</li>
-          </ol>
-        </ol>
+          </ul>
+        </ul>
       </ul>
     </ol>
   </List>
