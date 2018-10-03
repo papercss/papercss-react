@@ -1,15 +1,11 @@
 import React from "react";
-import * as Paper from "react-paper-css";
+import { Typography } from "react-paper-css";
 import RoughReactLogo from "react-rough-logo";
 
 const roughOptions = {
   stroke: "#41403e",
   strokeWidth: 4,
 };
-
-console.log({ Paper });
-
-const Typography = "div";
 
 const About = () => (
   <Typography as="section">
