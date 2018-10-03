@@ -8,20 +8,13 @@ React Components for [PaperCSS](https://github.com/papercss/papercss)
 npm install --save react-paper-css
 ```
 
+```
+yarn add react-paper-css
+```
+
 ## Usage
 
-Just import whichever components you would like to use, like below:
-
-```
-import {
-  Button,
-  Badge,
-  PaperInput,
-  PaperSelect,
-  PaperRadio,
-  PaperCheckbox
-} from 'react-paper-css';
-```
+See the [docs](docs-url) for usage examples and API documentation.
 
 ## Developing
 
@@ -33,3 +26,7 @@ yarn workspace examples dev // Start dev server for the docs.
 ```
 
 Then click or copy the link in your terminal to go to examples page.
+
+## Contributing
+
+Fork the repository and create a Pull Request. Don't be shy!
