@@ -4,7 +4,7 @@ import RoughReactLogo from "react-rough-logo";
 
 const roughOptions = {
   stroke: "#41403e",
-  strokeWidth: 8,
+  strokeWidth: 4,
 };
 
 const About = () => (
@@ -20,15 +20,16 @@ const About = () => (
       <RoughReactLogo
         ellipsesOptions={{
           ...roughOptions,
-          roughness: 1.8,
+          roughness: 1.6,
         }}
         circleOptions={roughOptions}
         style={{
           marginRight: "10px",
           width: "150px",
         }}
-        viewBox="-200 -200 400 400"
-        scale={0.6}
+        viewBox="-100 -100 200 200"
+        shapeRendering="geometricprecision"
+        scale={0.3}
       />
       <h1
         style={{

@@ -6,7 +6,7 @@ const roughOptions = {
   strokeWidth: 2,
 };
 
-const SmallLogo = () => (
+const SmallReactLogo = () => (
   <RoughReactLogo
     ellipsesOptions={roughOptions}
     circleOptions={roughOptions}
@@ -19,4 +19,4 @@ const SmallLogo = () => (
   />
 );
 
-export default SmallLogo;
+export default SmallReactLogo;

@@ -8,7 +8,7 @@ import styled from "styled-components";
 import About from "./About";
 import * as _docs from "./docs";
 import { H3, H4 } from "./Headings";
-import SmallLogo from "./SmallLogo";
+import SmallReactLogo from "./SmallReactLogo";
 
 const docs: Record<string, React.ComponentType> = { ..._docs };
 delete docs.__esModule;
@@ -67,7 +67,7 @@ export default class Pages extends React.Component {
               display: "flex",
             }}
           >
-            <SmallLogo />
+            <SmallReactLogo />
             PaperCSS React
           </H3>
           <Link to="/">About</Link>
