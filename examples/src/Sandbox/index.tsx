@@ -1,65 +1,8 @@
 import React from "react";
 import { Typography } from "react-paper-css";
-import styled, { css } from "styled-components";
 
 import Editors from "./Editors";
-
-const UnderlinedButton = styled.button`
-  text-decoration: none;
-  background: transparent;
-  background-repeat: repeat-x;
-  background-size: 6px 6px;
-  background-position: 0 90%;
-
-  border: 0;
-  margin: 10px;
-  padding: 0;
-  width: auto;
-  overflow: visible;
-
-  color: inherit;
-  font: inherit;
-
-  line-height: normal;
-
-  -webkit-font-smoothing: inherit;
-  -moz-osx-font-smoothing: inherit;
-
-  -webkit-appearance: none;
-
-  ${({ active }: { active?: boolean }) => {
-    if (active) {
-      const underlineColor = "#86a361";
-      return css`
-        background-image: linear-gradient(
-            5deg,
-            transparent 65%,
-            ${underlineColor} 80%,
-            transparent 90%
-          ),
-          linear-gradient(
-            165deg,
-            transparent 5%,
-            ${underlineColor} 15%,
-            transparent 25%
-          ),
-          linear-gradient(
-            165deg,
-            transparent 45%,
-            ${underlineColor} 55%,
-            transparent 65%
-          ),
-          linear-gradient(
-            15deg,
-            transparent 25%,
-            ${underlineColor} 35%,
-            transparent 50%
-          );
-      `;
-    }
-    return "";
-  }};
-`;
+import { UnderlinedToggle } from "./UnderlinedToggle";
 
 const defaultInitialState = {
   markupVisible: false,
@@ -70,7 +13,7 @@ type State = typeof defaultInitialState;
 
 export type SandboxProps = {
   source: string;
-  initialState?: Partial<State>
+  initialState?: Partial<State>;
 };
 
 class Sandbox extends React.PureComponent<SandboxProps, State> {
@@ -85,18 +28,18 @@ class Sandbox extends React.PureComponent<SandboxProps, State> {
     return (
       <section>
         <Typography as="section">
-          <UnderlinedButton
+          <UnderlinedToggle
             active={sourceVisible}
             onClick={this.toggleShowSource}
           >
             Playground
-          </UnderlinedButton>
-          <UnderlinedButton
+          </UnderlinedToggle>
+          <UnderlinedToggle
             active={markupVisible}
             onClick={this.toggleShowMarkup}
           >
             Show HTML
-          </UnderlinedButton>
+          </UnderlinedToggle>
         </Typography>
         <Editors
           initialSource={source}

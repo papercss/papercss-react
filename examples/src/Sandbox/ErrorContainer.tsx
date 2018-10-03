@@ -1,6 +1,6 @@
 import React from "react";
 
-type ErrorContainerProps = { error: Error };
+type ErrorContainerProps = { error: Error | null };
 const ErrorContainer = ({ error }: ErrorContainerProps) =>
   error && (
     <div>

@@ -19,7 +19,7 @@ class HighlightedCode extends React.PureComponent<Props> {
       <pre
         style={{
           backgroundColor: "#1D1F21",
-          lineHeight: CODE_LINE_HEIGHT,
+          lineHeight: 1,
           overflow: "auto",
           padding: "0.8em",
         }}
@@ -35,7 +35,7 @@ class HighlightedCode extends React.PureComponent<Props> {
           style={{
             fontFamily: "Inconsolata",
             fontSize: CODE_FONT_SIZE,
-            lineHeight: CODE_LINE_HEIGHT,
+            lineHeight: 1,
           }}
         />
       </pre>
