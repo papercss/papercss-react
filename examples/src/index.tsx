@@ -5,17 +5,9 @@ import { HashRouter as Router } from "react-router-dom";
 import Pages from "./Pages";
 
 const App = () => (
-  <main
-    style={{
-      backgroundImage:
-        "url(https://www.getpapercss.com/img/geometry2.png) repeat",
-      height: "100%",
-    }}
-  >
-    <Router>
-      <Pages />
-    </Router>
-  </main>
+  <Router>
+    <Pages />
+  </Router>
 );
 
 render(<App />, document.getElementById("root"));

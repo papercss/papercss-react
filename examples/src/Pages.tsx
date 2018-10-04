@@ -17,6 +17,7 @@ delete docs.__esModule;
 
 const Section = styled.section`
   height: 100%;
+
   @media (min-width: 420px) {
     display: grid;
     grid-template-columns: 1fr 3fr 0;
@@ -48,6 +49,7 @@ const links = docsKeys.map(name => (
 const Nav = styled((props: React.AllHTMLAttributes<HTMLDivElement>) => (
   <Typography {...props} as="nav" />
 ))`
+  padding: 8px 0 0 8px;
   min-width: 120px;
 
   max-width: 240px;
@@ -80,8 +82,7 @@ export default class Pages extends React.Component {
         </Nav>
         <article
           style={{
-            height: "100%",
-            margin: "0 8px 0 8px",
+            margin: "8px 8px 0 8px",
             maxWidth: "1000px",
             minWidth: "370px",
           }}

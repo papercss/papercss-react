@@ -1,10 +1,9 @@
 .heading {
-  font-family: 'Patrick Hand SC', sans-serif;
+  font-family: "Patrick Hand SC", sans-serif;
   font-weight: 400;
 
   @at-root h1#{&} {
     font-size: 4rem;
-    margin: .67em 0;
   }
 
   @at-root h2#{&} {
@@ -24,12 +23,12 @@
   }
 
   @at-root h6#{&} {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
 
 .text {
-  font-family: 'Neucha', sans-serif;
+  font-family: "Neucha", sans-serif;
   font-size: 20px;
   color: #41403e;
 }
@@ -49,7 +48,7 @@
   th,
   thead,
   tr {
-    font-family: 'Neucha', sans-serif;
+    font-family: "Neucha", sans-serif;
   }
 
   h1,
@@ -58,25 +57,33 @@
   h4,
   h5,
   h6 {
-    @extend .heading
+    @extend .heading;
   }
 
   ul,
   ol {
-    font-family: 'Neucha', sans-serif;
+    font-family: "Neucha", sans-serif;
   }
 
   a {
     color: #41403e;
     text-decoration: none;
-    background-image: linear-gradient(5deg, transparent 65%, #0071de 80%, transparent 90%), linear-gradient(165deg, transparent 5%, #0071de 15%, transparent 25%), linear-gradient(165deg, transparent 45%, #0071de 55%, transparent 65%), linear-gradient(15deg, transparent 25%, #0071de 35%, transparent 50%);
+    background-image: linear-gradient(
+        5deg,
+        transparent 65%,
+        #0071de 80%,
+        transparent 90%
+      ),
+      linear-gradient(165deg, transparent 5%, #0071de 15%, transparent 25%),
+      linear-gradient(165deg, transparent 45%, #0071de 55%, transparent 65%),
+      linear-gradient(15deg, transparent 25%, #0071de 35%, transparent 50%);
     background-repeat: repeat-x;
     background-size: 4px 3px;
     background-position: 0 90%;
 
     &:visited {
       text-decoration: none;
-      color: #41403e
+      color: #41403e;
     }
   }
 }

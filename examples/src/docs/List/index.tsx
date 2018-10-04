@@ -1,8 +1,8 @@
 import { readFileSync } from "fs";
 import React from "react";
-import { Typography } from "react-paper-css";
+import { Heading, Typography } from "react-paper-css";
 
-import { H3 } from "../../Headings";
+import { DocumentationHeading, H3 } from "../../Headings";
 import HighlightedCode from "../../HighlightedCode";
 import Sandbox from "../../Sandbox";
 
@@ -21,7 +21,7 @@ const mixedListSource = readFileSync(
 
 const BadgeDoc = () => (
   <Typography>
-    <H3>List</H3>
+    <DocumentationHeading>List</DocumentationHeading>
     <HighlightedCode
       code={`
 type ListElement = HTMLUListElement | HTMLOListElement;
