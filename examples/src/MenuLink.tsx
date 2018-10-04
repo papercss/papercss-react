@@ -8,18 +8,12 @@ const active = css`
   }
 `;
 
-export const MenuLink = ({ to, ...rest }: NavLinkProps & { to: string }) => (
-  <Route path={to} exact>
-    {({ match }) =>
-      match ? (
-        <li className={active}>
-          <NavLink to={to} {...rest} />
-        </li>
-      ) : (
-        <li>
-          <NavLink to={to} {...rest} />
-        </li>
-      )
-    }
+export const MenuLink = (props: NavLinkProps & { to: string }) => (
+  <Route path={props.to} exact>
+    {({ match }) => (
+      <li className={match ? active : ""}>
+        <NavLink {...props} />
+      </li>
+    )}
   </Route>
 );
