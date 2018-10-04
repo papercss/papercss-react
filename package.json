@@ -1,5 +1,9 @@
 {
   "private": true,
+  "scripts": {
+    "dev": "yarn workspace examples dev",
+    "watch": "yarn workspace react-paper-css watch"
+  },
   "workspaces": {
     "packages": [
       "library",
