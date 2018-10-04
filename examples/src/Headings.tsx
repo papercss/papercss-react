@@ -12,10 +12,6 @@ const noSelect = css`
   user-select: none;
 `;
 
-export const DocumentationHeading = (props: Props) => (
-  <Heading {...props} className={cx(props.className, smallMargin)} />
-);
-
 export const H4 = styled((props: Props) => (
   <Heading {...props} as="h4" className={cx(props.className, noSelect)} />
 ))`
