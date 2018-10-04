@@ -1,7 +1,12 @@
 {
   "private": true,
-  "workspaces": [
-    "library",
-    "examples"
-  ]
+  "workspaces": {
+    "packages": [
+      "library",
+      "examples"
+    ],
+    "nohoist": [
+      "**/react-router/hoist-non-react-statics"
+    ]
+  }
 }
