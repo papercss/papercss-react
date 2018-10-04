@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from "react-emotion";
 
 function wavyUnderline(underlineColor: string) {
   return css`

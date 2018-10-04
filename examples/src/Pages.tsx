@@ -1,13 +1,15 @@
 import React from "react";
 import styled from "react-emotion";
-import { borderStyles, List, ListProps, Typography } from "react-paper-css";
+import { borderStyles, Typography } from "react-paper-css";
 // tslint:disable-next-line:no-submodule-imports
 import "react-rough-logo/build/index.css";
-import { NavLink, NavLinkProps, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 import About from "./About";
 import * as _docs from "./docs";
 import { H3, H4 } from "./Headings";
+import { LinksSection } from "./LinksSection";
+import { MenuLink } from "./MenuLink";
 import SmallReactLogo from "./SmallReactLogo";
 
 const docs: Record<string, React.ComponentType> = { ..._docs };
@@ -36,22 +38,6 @@ const Section = styled.section`
 `;
 
 const docsKeys = Object.keys(docs);
-
-const LinksSection = (props: ListProps) => (
-  <List
-    style={{
-      margin: 0,
-      paddingLeft: "18px",
-    }}
-    {...props}
-  />
-);
-
-const MenuLink = (props: NavLinkProps) => (
-  <li>
-    <NavLink {...props} />
-  </li>
-);
 
 const links = docsKeys.map(name => (
   <MenuLink key={name} to={`/${name}`}>

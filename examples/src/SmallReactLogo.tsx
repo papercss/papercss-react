@@ -1,6 +1,6 @@
 import React from "react";
+import styled from "react-emotion";
 import RoughReactLogo from "react-rough-logo";
-import styled from "styled-components";
 
 const roughOptions = {
   stroke: "#41403e",
