@@ -9,16 +9,18 @@ import Sandbox from "../../Sandbox";
 const source = readFileSync(`${__dirname}/Example.tsx`, "utf-8");
 
 const TypographyDoc = () => (
-  <Typography>
-    <H3>Typography</H3>
-    <p>
-      Typography component provides his children with text styles.
-      <br />
-      If you need only some of the styles, take a look at{" "}
-      <Link to="/Heading">Heading</Link> and <Link to="/Text">Text</Link>
-    </p>
+  <div>
+    <Typography>
+      <H3>Typography</H3>
+      <p>
+        Typography component provides his children with text styles.
+        <br />
+        If you need only some of the styles, take a look at{" "}
+        <Link to="/Heading">Heading</Link> and <Link to="/Text">Text</Link>
+      </p>
+    </Typography>
     <Sandbox source={source} />
-  </Typography>
+  </div>
 );
 
 export default TypographyDoc;

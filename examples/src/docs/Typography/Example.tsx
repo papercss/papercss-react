@@ -5,9 +5,9 @@ const Example = (
   <>
     <Typography>
       <h1 style={{ margin: "5px 0 5px 0" }}>Header.</h1>
-      Look at this text.
+      <span>Take a look at this text.</span>
     </Typography>
-    Normal text here!
+    <span>Serious text with default styles here</span>
     <Typography as="section">And here we are sketchy again!</Typography>
   </>
 );

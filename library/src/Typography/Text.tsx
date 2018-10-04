@@ -5,7 +5,7 @@ import classNames from "../utils/classNames";
 
 import styles from "./styles.scss";
 
-export type PaperProps<T extends HTMLElement = HTMLElement> = {
+export type TextProps<T extends HTMLElement = HTMLElement> = {
   as?: keyof React.ReactHTML;
 } & HTMLAttributes<T>;
 
@@ -13,7 +13,7 @@ function Text<T extends HTMLElement = HTMLElement>({
   as: ElementType = "span",
   className,
   ...rest
-}: PaperProps<T>) {
+}: TextProps<T>) {
   return (
     <ElementType className={classNames(styles.text, className)} {...rest} />
   );

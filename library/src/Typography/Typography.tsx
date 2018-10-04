@@ -5,11 +5,12 @@ import classNames from "../utils/classNames";
 
 import styles from "./styles.scss";
 
-type Props = {
+export type TypographyProps = {
   as: keyof React.ReactHTML;
 } & HTMLAttributes<HTMLDivElement>;
-class Typography extends React.Component<Props> {
-  public static defaultProps: Pick<Props, "as"> = {
+
+class Typography extends React.Component<TypographyProps> {
+  public static defaultProps: Pick<TypographyProps, "as"> = {
     as: "div",
   };
   public render() {
