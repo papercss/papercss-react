@@ -4,9 +4,7 @@
     "module": "es2015",
     "moduleResolution": "node",
     "lib": ["es2017", "dom"],
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
     "jsx": "react"
   },
-  "include": ["./src"]
+  "include": ["./src", "../declarations"]
 }
