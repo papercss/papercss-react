@@ -76,6 +76,9 @@ export default class Pages extends React.Component {
           </H3>
           <LinksSection>
             <MenuLink to="/">About</MenuLink>
+            <MenuLink href={process.env.GITHUB_URL} target="__blank">
+              GitHub
+            </MenuLink>
           </LinksSection>
           <H4>Components</H4>
           <LinksSection>{links}</LinksSection>
