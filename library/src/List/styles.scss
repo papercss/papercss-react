@@ -1,0 +1,68 @@
+.list {
+  @at-root ol#{&} {
+    list-style-type: decimal;
+  }
+
+  @at-root ul#{&} {
+    list-style: none;
+    margin-left: 0;
+
+    li {
+      text-indent: -7px;
+      list-style: none;
+
+      &:before {
+        position: relative;
+        left: -7px;
+        content: "-";
+      }
+    }
+  }
+
+  ol {
+    list-style-type: upper-alpha;
+  }
+
+  ol ol {
+    list-style-type: upper-roman;
+  }
+
+  ol ol ol {
+    list-style-type: lower-alpha;
+  }
+
+  ol ol ol ol {
+    list-style-type: lower-roman;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  ul li {
+    text-indent: -7px;
+    list-style: none;
+
+    &:before {
+      position: relative;
+      left: -7px;
+      content: "-";
+    }
+  }
+
+  ul li:before {
+    content: "+";
+  }
+
+  ul ul li:before {
+    content: "~";
+  }
+
+  ul ul ul li:before {
+    content: "⤍";
+  }
+
+  ul ul ul ul li:before {
+    content: "⁎";
+  }
+}
