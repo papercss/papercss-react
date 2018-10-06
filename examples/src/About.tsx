@@ -47,7 +47,7 @@ const About = () => (
       <li>Written in TypeScript</li>
     </ul>
     <section>
-      <h2>No global styles</h2>
+      <h2>Differences to PaperCSS</h2>
       <p>
         Let me quote the original PaperCSS{" "}
         <a href="https://www.getpapercss.com/about/">about page</a>:
